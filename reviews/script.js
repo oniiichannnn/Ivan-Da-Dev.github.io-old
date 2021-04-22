@@ -4,8 +4,8 @@ const anime_lists = [
         rating: 9,
         review: "I have finished **all** seasons about A Certain Magical Index. I LOVED IT, it has action, comedy and harem. Not only that but it has adventure too (now you're concept of adventure might be different than mine, adventure in my mind means going to places), every time I look back at this anime, it makes me feel nostalgic. This anime was always entertaining me during quarantine. Tho the reason why I gave it a 9 was because of Index, shes fucking useless but shes fucking funny and cute too. So shes a good character when it comes to anything other than fighting, shes a good support, knowledgeable, annoying, cute and lazy",
         genres: ["magic","comedy","action","harem"],
-        img: "https://m.media-amazon.com/images/M/MV5BZDkxMTdmMDgtZmQ1NC00NzZlLWIxMjgtMjkyMTFlZjI3OWZiXkEyXkFqcGdeQXVyMjQ0OTA1Nzc@._V1_UY1200_CR85,0,630,1200_AL_.jpg",
-        bg: "https://images6.alphacoders.com/734/thumb-1920-734940.jpg"
+        img: "./images/index_img.jpg",
+        bg: "./images/index_bg.jpg"
     },
     {
         title: "darling in the franxx",
@@ -28,7 +28,7 @@ const anime_lists = [
         rating: 10,
         review: "This anime is very good, its the first that make my cry like a little bitch lmao. I thought this was gonna be one of those happy ending animes but NOPE. \"What do u mean its sad? Didn't Isla came back to life at the end?\" no, remember that they mention they recycle used androids in order to save money? Yeah, they recycled (they removed her old memories and personality) Isla and gave tsukasa the recycled Isla, man thats even worse than Isla dying tbh. Why did this anime make me cry but I didn't cry when I watched \"A silent voice\"? Men, because this anime has 13 episodes (13 x 24 minutes = 312 minutes) while A silent voice was just 2 hours (120 minutes) long. Not only that but in a silent voice's ending, no one died while in plastic memories's ending, Isla died, well her old self died. And I wouldn't cry if it wasn't for Isla's last speech at the end, its so fucking sad and plus they added sad music in the background. This anime was rated a 10 because its the first and I hope it isn't the last anime to make me cry. It has a solid plot, solid characters and a good name",
         genres: ["romance","drama","slice of life","science","sci-fi"],
-        img: "https://static.wikia.nocookie.net/plastic-memories/images/8/83/Plastic_Memories_Poster.png/revision/latest?cb=20190730003248",
+        img: "./images/plamemo_img.png",
         bg: "https://littlecloudcuriosity.files.wordpress.com/2015/06/plastic-memories-episode-13-28.jpg"
     },
     {
@@ -36,7 +36,7 @@ const anime_lists = [
         rating: 8,
         review: "A lot of people said that this is a sad anime so I decided to watch it, and boy it wasn't sad at all. So basically what the movie is about is that theres a boy named Taki and a girl named Mitsuha, he keeps getting his mind swapped with a girl named Mitsuha, this keeps continuing for a few months, they are from different time stamps, meh I'm too lazy to type the whole description, go view it on MAL or somewhere. Taki finds out that Mitsuha's village is gonna get crushed by a meteor, so to save Mitsuha, **he drinks sake and fucking time trvales back in time** :woa:. Anyways, so Taki and Mitsuha both successfully saves Mitsuha's village by evacuting everyone to a place where the meteor won't hit. HOWEVER, since Mitsuha never died, this causes the butterfly effect, Taki never knew who Mitsuha is. But in the end they met when they were adults and Taki kinda recognizes Mitsuha and they lived happily ever after. Why did I rate it a 8? because it didn't make me cry like I expected it to be and hey, if it weren't for the music, I would've gave it a 5 [aaaa](https://youtube.com)",
         genres: ["romance"],
-        img: "https://static.wikia.nocookie.net/kiminonawa/images/6/62/Kimi-no-Na-wa.-Visual.jpg/revision/latest?cb=20160927170951",
+        img: "./images/your_name_img.jpg",
         bg: "https://wallpapercave.com/wp/wp1892105.png"
     },
     {
