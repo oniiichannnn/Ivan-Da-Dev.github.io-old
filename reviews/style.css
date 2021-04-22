@@ -1,0 +1,248 @@
+body {
+    background-color: #28282B;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.head img#head_bg {
+    max-width: 700px;
+    max-height: 700px;
+    width: 70%;
+    height: 70%;
+
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.head h1#head_title{
+    color: white;
+    text-align: center;
+    font-size: 5rem;
+}
+
+.head h1#desc, .head h1#note{
+    background-color: #18181a;
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    border-radius: 10px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+#view{
+    display: none;
+    z-index: 0;
+    position: relative;
+    height: max-content;
+    margin: -8px;
+}
+
+#view #layer {
+    background-color: black;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+#view div {
+    position: absolute;
+}
+
+#view #content {
+    position: relative;
+    margin-top: -43px;
+}
+
+#view #view_title{
+    font-size: 4rem;
+    color: white;
+    margin-left: 2%;
+
+    z-index: 1;
+    text-shadow: 0px 5px 18px black;
+}
+
+#view #view_genres{
+    margin-left: 2%;
+    text-shadow: 0px 5px 18px black;
+}
+
+#view #view_note{
+    color: rgb(243, 226, 226);
+    font-size: 1.5rem;
+    border-radius: 10px;
+    margin-left: 2%;
+    text-shadow: 0px 5px 18px black;
+    font-weight: bolder;
+}
+
+#view #view_rating{
+    color: white;
+    margin-left: 2%;
+    font-size: 1.5rem;
+    font-family: 'open sans',arial,sans-serif;
+    text-shadow: 0px 5px 18px black;
+}
+
+#view #view_review{
+    color: white;
+    text-shadow: 0px 5px 18px black;
+    font-size: 2rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 5px;
+
+    z-index: 1;
+    font-weight: lighter;
+}
+
+#view #view_img{
+    max-height: 80%;
+    max-width: 70%;
+
+    z-index: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0px 5px 18px black;
+}
+
+#view #back:hover{
+    background-color: darkcyan;
+}
+
+#view #back{
+    font-size: 3.5rem;
+    background-color: #18181a3b; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    outline: none;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.body .anime_list{
+    background-color: #18181a;
+    color: white;
+    font-size: 2.5rem;
+    margin-left: 0%;
+    border-radius: 5px;
+}
+
+.body .anime_list .card:hover{
+    background-color:rgba(124, 119, 119, 0.65);
+}
+
+.body .anime_list .card{
+    height: 50%;
+    width: 15%;
+    min-height: 500px;
+    min-width: 250px;
+    display: inline-block;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.body .anime_list .card .card_img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.body .anime_list .card .card_title{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.body .anime_list .card .card_ratings{
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'open sans',arial,sans-serif;
+}
+
+#card_rating_bigger{
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+#genre{
+    text-shadow: 0px 5px 18px black;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.315);
+}
+
+#genre:hover{
+    color: wheat;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v5/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+}
+
+#bold {
+    color: wheat;
+}
+
+.emoji {
+    max-height: 3rem;
+    max-width: 3rem;
+}
+
+.link {
+    color: wheat;
+    font-size: 2rem;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.attachment {
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 50%;
+    border-radius: 5px;
+}
+
+.attachment_ctn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 800px) {
+    .body .anime_list{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    h1#iden{
+        text-align: center;
+    }
+    
+    .body .anime_list .card{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
