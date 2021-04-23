@@ -129,8 +129,6 @@ function load_animes(){
         return url.replace(/%20/g,' ')
     }
 
-    if(document.URL.includes('https://oniichann.tk/reviews/?anime=')) return
-
     anime_lists.sort().forEach(anime => {
         let card = document.createElement("div")
         let img = document.createElement("img")
