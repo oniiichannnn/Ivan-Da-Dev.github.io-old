@@ -111,10 +111,10 @@ const linkReg = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]
 
 function load_animes(){
     if(document.URL.includes('https://oniichann.tk/reviews/?anime=')){
-        console.log(decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length))
         if(!anime_lists.find(a => a.title.toLowerCase().includes(decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length)))) return
 
         let anime = anime_lists.find(a => a.title.toLowerCase().includes(decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length)))
+        console.log(anime)
         display_anime(anime)
     }
 
