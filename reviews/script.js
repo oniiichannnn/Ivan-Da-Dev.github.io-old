@@ -113,7 +113,7 @@ function load_animes(){
     if(document.URL.includes('https://oniichann.tk/reviews/?anime=')){
         if(!anime_lists.find(a => a.title.toLowerCase().includes(decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length)))) return
 
-        let anime = anime_lists.find(a => a.title.toLowerCase().includes(decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length)))
+        let anime = anime_lists.find(a => a.title.toLowerCase() === decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length))
         console.log(anime)
         display_anime(anime)
     }
