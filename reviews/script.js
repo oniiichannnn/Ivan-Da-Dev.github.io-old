@@ -216,7 +216,7 @@ function display_anime(anime){
     getPage.style.display = 'inherit'
     document.getElementsByClassName('body')[0].style.display = 'none'
     document.getElementsByClassName('head')[0].style.display = 'none'
-    document.body.style.backgroundImage = `url(${anime.bg})`
+    document.body.style.backgroundImage = `./images/url(${anime.bg})`
 }
 
 function toPropercase(string){
