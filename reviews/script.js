@@ -62,6 +62,14 @@ const anime_lists = [
         genres: ["ecchi","comedy","slice of life","romance","creator's slice of life"],
         img: "asayn_img.jpg",
         bg: "asayn_bg.jpg"
+    },
+    {
+        title: "to love ru",
+        rating: 10,
+        review: 'This anime was the first **nudity anime** that I watched and its the best nudity anime I\'ve ever watched up until now. Its not one of those nudity focused anime, it has comedy and romance in it as well and for the first time in I don\'t know how long, one of the characters in the anime (Momo Belia Deviluke aka Lala\'s sister) @./tlr_momo.png@ wanted to created a harem for Rito lmao. It has a nice balance of comedy and ecchi and thats what makes it good compared to other ecchi animes',
+        genres: ["nudity","ecchi","comedy","magic","action","school","harem","romance"],
+        img: "tlr_img.jpg",
+        bg: "tlr_bg.jpg"
     }
 ]
 
@@ -111,11 +119,9 @@ const linkReg = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]
 
 function load_animes(){
     if(document.URL.includes('https://oniichann.tk/reviews/?anime=')){
-        console.log(anime_lists.find(a => a.title.toLowerCase() === decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length)))
         if(!anime_lists.find(a => a.title.toLowerCase().includes(decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length)))) return
 
         let anime = anime_lists.find(a => a.title.toLowerCase() === decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length))
-        console.log(anime)
         display_anime(anime)
     }
 
