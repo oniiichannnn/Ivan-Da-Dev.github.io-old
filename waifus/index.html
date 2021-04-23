@@ -7,13 +7,13 @@
     <title>Onii Chan</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js"></script>
-    <link rel="icon" href="./icon.png">
+    <link rel="icon" href="./images/icon.png">
 </head>
-<body onload="load_animes()">
+<body onload="load_waifus()">
     <div class="head">
         <!-- <h1 id="head_title">Hello</h1> -->
         
-        <img src="https://wallpapercave.com/wp/wp6079336.jpg" id="head_bg" onclick="window.location.replace('./index.html')">
+        <img src="./images/bg.jpg" id="head_bg" onclick="window.location.replace('./index.html')">
 
         <h1 id="desc">
             Note: There will be ecchi images  ͡° ͜ʖ ͡°
@@ -21,13 +21,14 @@
     </div>
 
     <div id="view">
-        <div id="layer"></div>
+        <!-- <div id="layer"></div> -->
+        <img id="view_img">
         <div id="content">
             <h1 id="view_name"></h1>
-            <h2 id="view_animes"></h2>
-            <h3 id="view_rating"></h3>
+            <h2 id="view_birthday"></h2>
+            <h3 id="view_age"></h3>
+            <h4 id="view_animes"></h4>
             <button id="back" onclick="back()">Back To List</button>
-            <img id="view_img">
         </div>
     </div>
 

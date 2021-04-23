@@ -46,22 +46,24 @@ body {
     margin: -8px;
 }
 
-#view #layer {
+/* #view #layer {
     background-color: black;
     opacity: 0.5;
     height: 100%;
     width: 100%;
     position: absolute;
     z-index: 0;
-}
+} */
 
 #view div {
     position: absolute;
+    overflow: auto;
 }
 
 #view #content {
     position: relative;
     margin-top: -43px;
+    overflow: hidden;
 }
 
 #view #view_name{
@@ -73,9 +75,25 @@ body {
     text-shadow: 0px 5px 18px black;
 }
 
-#view #view_animes{
+#view #view_age{
     margin-left: 2%;
     text-shadow: 0px 5px 18px black;
+    color: pink;
+}
+
+#view #view_birthday{
+    margin-left: 2%;
+    text-shadow: 0px 5px 18px black;
+    color: pink;
+}
+
+#view #view_animes{
+    margin-left: 2%;
+    color: orange;
+}
+
+#anime_name, #birthday, #age{
+    color: orangered;
 }
 
 #view #view_rating{
@@ -87,14 +105,14 @@ body {
 }
 
 #view #view_img{
-    max-height: 80%;
-    max-width: 70%;
+    max-height: 30%;
+    max-width: 20%;
+    margin-left: 1%;
 
     z-index: 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     text-shadow: 0px 5px 18px black;
+    float: left;
+    border-radius: 5px;
 }
 
 #view #back:hover{
@@ -150,7 +168,7 @@ body {
     text-align: center;
 }
 
-.body .waifu_list .card .card_ratings{
+.body .waifu_list .card .card_nsfw{
     font-size: 1rem;
     text-align: center;
     font-family: 'open sans',arial,sans-serif;
@@ -203,4 +221,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media only screen and (max-width: 800px) {
+    .body .waifu_list{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    h1#iden{
+        text-align: center;
+    }
+
+    .body .waifu_list .card{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
 }
