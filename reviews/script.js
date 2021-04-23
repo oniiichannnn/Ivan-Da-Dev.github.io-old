@@ -146,7 +146,7 @@ function load_animes(){
         Array.from(document.getElementsByClassName("anime_list")).find(e => e.id === anime.title.substring(0,1).toUpperCase())
         .appendChild(card)
     })
-    
+
     if(document.URL.includes('https://oniichann.tk/reviews/?anime=')){
         if(!anime_lists.find(a => a.title.toLowerCase().includes(decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length)))) return
 
@@ -155,7 +155,7 @@ function load_animes(){
     }
 
     function decodeURL(url){
-        return url.replace(/%20/g,' ')
+        return decodeURIComponent(url)
     }
 }
 

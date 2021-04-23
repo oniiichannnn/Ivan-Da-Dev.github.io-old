@@ -72,28 +72,33 @@ body {
     margin-left: 2%;
 
     z-index: 1;
-    text-shadow: 0px 5px 18px black;
 }
 
 #view #view_age{
     margin-left: 2%;
-    text-shadow: 0px 5px 18px black;
-    color: pink;
+    color: white;
+    font-size: 3rem;
 }
 
 #view #view_birthday{
     margin-left: 2%;
-    text-shadow: 0px 5px 18px black;
-    color: pink;
+    color: white;
+    font-size: 3rem;
 }
 
 #view #view_animes{
     margin-left: 2%;
-    color: orange;
+    color: white;
+    font-size: 3rem;
 }
 
-#anime_name, #birthday, #age{
-    color: orangered;
+#birthday, #age{
+    color: wheat;
+}
+
+#anime_name{
+    color: wheat;
+    cursor: pointer;
 }
 
 #view #view_rating{
@@ -101,7 +106,6 @@ body {
     margin-left: 2%;
     font-size: 1.5rem;
     font-family: 'open sans',arial,sans-serif;
-    text-shadow: 0px 5px 18px black;
 }
 
 #view #view_img{
@@ -110,7 +114,6 @@ body {
     margin-left: 1%;
 
     z-index: 0;
-    text-shadow: 0px 5px 18px black;
     float: left;
     border-radius: 5px;
 }
@@ -237,5 +240,35 @@ body {
         margin-left: auto;
         margin-right: auto;
         display: block;
+    }
+
+    #view div {
+        position: absolute;
+        overflow: inherit;
+    }
+    
+    #view #content {
+        position: relative;
+        margin-top: -43px;
+        overflow: inherit;
+        text-align: center;
+    }
+    
+    #view #view_img{
+        float: none;
+        max-height: 70%;
+        max-width: 100%;
+        margin-left: 1%;
+    
+        z-index: 0;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        border-radius: 5px;
+    }
+
+    #view #view_name{
+        margin-left: 0%;
+        text-align: center;
     }
 }
