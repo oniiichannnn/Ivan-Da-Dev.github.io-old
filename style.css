@@ -49,3 +49,14 @@ body {
 
     text-align: center;
 }
+
+#subtitle{
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+}
+
+#english {
+    font-size: 1rem;
+    font-weight: lighter;
+}

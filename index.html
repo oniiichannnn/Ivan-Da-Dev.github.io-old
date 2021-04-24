@@ -8,9 +8,10 @@
     <link href="./style.css" rel="stylesheet">
     <link rel="icon" href="./images/icon.png">
 </head>
-<body>
+<body onload='greet()'>
     <div class="notices">
-        <img src="./images/home_notices_1.jpg" class="notices_img" id="april_wallpaper">
+        <h1 id="subtitle"></h1>
+        <img src="" class="notices_img" id="april_wallpaper">
     </div>
     <div class="buttons">
         <a href="./reviews">Reviews</a>
@@ -19,4 +20,25 @@
         <a>Voice Actors</a> -->
     </div>
 </body>
+<script>
+    function greet(){
+        /*
+        0 - 10 Morning
+        11 - 18 Evening
+        19 - 23 Night
+        */
+
+        let currentTime = new Date()
+        let time = 
+        currentTime.getHours() > -1 && currentTime.getHours() < 11 ? "morning" : "evening" 
+
+        if(time === 'morning'){
+            document.getElementById('april_wallpaper').src = './images/morning.jpg'
+            document.getElementById('subtitle').innerHTML = 'おはようございます<br><strong id="english">(Good Morning)</strong>'
+        } else {
+            document.getElementById('april_wallpaper').src = './images/night.png'
+            document.getElementById('subtitle').innerHTML = 'こんばんは<br><strong id="english">(Good Evening)</strong>'
+        }
+    }
+</script>
 </html>
