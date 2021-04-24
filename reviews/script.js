@@ -42,7 +42,7 @@ const anime_lists = [
     {
         title: "grand blue",
         rating: 9.5,
-        review: "This is the best slice of life anime ever. At first I watched this during quarantine because I saw a funny clip on youtube, and boy although the thumbnail of the anime makes u think \"oh this is probaly related to diving\", well NOPE. Although it may look like a diving related anime but the anime is 10% about diving and 90% about naked men drinking. They did a perfect job of adding slice of life and comedy together, the art style just tops it all, they draw really contrasted faces when its comedy time lmao for example: @gb_shocked.jpg@ which makes it 100 times funnier",
+        review: "This is the best slice of life anime ever. At first I watched this during quarantine because I saw a funny clip on youtube, and boy although the thumbnail of the anime makes u think \"oh this is probaly related to diving\", well NOPE. Although it may look like a diving related anime but the anime is 10% about diving and 90% about naked men drinking. They did a perfect job of adding slice of life and comedy together, the art style just tops it all, they draw really contrasted faces when its comedy time lmao for example: @./gb_shocked.jpg@ which makes it 100 times funnier",
         genres: ["slice of life","comedy"],
         img: "gb_img.jpg",
         bg: "gb_bg.png"
