@@ -93,6 +93,20 @@ document.addEventListener("click", function(element){
     document.getElementsByClassName('body')[0].style.display = 'none'
     document.getElementsByClassName('head')[0].style.display = 'none'
     // document.body.style.backgroundImage = `url(${waifu.bg})`
+    document.getElementById('comments_script').text =
+    `
+     var disqus_config = function () {
+     this.page.url = "https://oniichann.tk/waifus";  // Replace PAGE_URL with your page's canonical URL variable
+     this.page.identifier = ${waifu.name.replace(/ /g,'_')}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+     };
+
+     (function() { // DON'T EDIT BELOW THIS LINE
+     var d = document, s = d.createElement('script');
+     s.src = 'https://oniichann-tk.disqus.com/embed.js';
+     s.setAttribute('data-timestamp', +new Date());
+     (d.head || d.body).appendChild(s);
+     })();
+    `
 })
 
 function toPropercase(string){

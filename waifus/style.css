@@ -226,6 +226,44 @@ body {
     justify-content: center;
 }
 
+.comments {
+    left: 0px;
+    background-color: #23272a;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 2px;
+    margin-top: 20px;
+
+    box-shadow: 5px 0px 18px black;
+}
+
+.comments h1 {
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #141618;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #7289da;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #8da5fc;
+}
+
 @media only screen and (max-width: 800px) {
     .body .waifu_list{
         margin-left: 5%;
@@ -246,20 +284,20 @@ body {
         position: absolute;
         overflow: inherit;
     }
-    
+
     #view #content {
         position: relative;
         margin-top: -43px;
         overflow: inherit;
         text-align: center;
     }
-    
+
     #view #view_img{
         float: none;
         max-height: 70%;
         max-width: 100%;
         margin-left: 1%;
-    
+
         z-index: 0;
         margin-right: auto;
         margin-left: auto;
