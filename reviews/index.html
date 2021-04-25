@@ -13,7 +13,7 @@
 <body onload="load_animes()">
     <div class="head">
         <!-- <h1 id="head_title">Hello</h1> -->
-        
+
         <img src="./images/bg.png" id="head_bg" onclick="window.location.replace('./index.html')">
 
         <h1 id="desc">
@@ -22,6 +22,10 @@
 
         <h1 id="note">
             <strong>Note:</strong> There will be spoilers in my reviews
+        </h1>
+
+        <h1 id="comments_btn">
+            Want to recomment me some of your shitty animes?<br><br><strong id="cmnts_link" onclick="window.scrollTo(0,document.getElementsByClassName('comments')[0].offsetTop)">Press me</strong>
         </h1>
     </div>
 
@@ -142,7 +146,29 @@
         <div class="anime_list" id="Z">
             <h1 id="iden">Z</h1>
         </div>
+    </div>
 
+    <div class="comments">
+    <h1>Comments</h1>
+    <div id="disqus_thread"></div>
+    <script id="comments_script">
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+        var disqus_config = function () {
+        this.page.url = "https://oniichann.tk/reviews";  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = "home"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://oniichann-tk.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 </body>
 </html>

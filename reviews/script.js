@@ -13,7 +13,7 @@ const anime_lists = [
         review: "This was the first anime that I watched. Half of it was good. 'U sick bastard how can u not enjoy darling in the franxx', well I prefer the 02 that loves to tease the MC but when they maked up at episode 6 or 7 or 8, 02 completely changed from a teaser to a normal girl, I rated it 10 because the plot is very good lmao. I didn't expect 02 and the MC to be giant spaceships and die together in the end. I ALSO DIDN'T EXPECT THOSE 2 KIDS TO HAVE SEX AND HAVE A BABY HOLY FUC- Oh I lost my composure there. I love it how they use the power system, whats a \"power system\" u ask? For example, 02 has the authority to go wherever she wants and do what she wants. They know what 02 is doing but they can't stop her because shes plays a important role too, I like how 02 keeps saying darling, this anime also feels nostalgic when thinking back",
         genres: ["school","magic","romance","drama","action","ecchi","comedy","science","sci-fi"],
         img: "darling_img.jpg",
-        bg: "darling_bg.png"
+        bg: "darling_bg.webp"
     },
     {
         title: "the pet girl of sakura hall",
@@ -217,6 +217,21 @@ function display_anime(anime){
     document.getElementsByClassName('body')[0].style.display = 'none'
     document.getElementsByClassName('head')[0].style.display = 'none'
     document.body.style.backgroundImage = `url(./images/${anime.bg})`
+
+    document.getElementById('comments_script').text =
+    `
+     var disqus_config = function () {
+     this.page.url = "https://oniichann.tk/reviews";  // Replace PAGE_URL with your page's canonical URL variable
+     this.page.identifier = ${anime.title.replace(/ /g,'_')}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+     };
+
+     (function() { // DON'T EDIT BELOW THIS LINE
+     var d = document, s = d.createElement('script');
+     s.src = 'https://oniichann-tk.disqus.com/embed.js';
+     s.setAttribute('data-timestamp', +new Date());
+     (d.head || d.body).appendChild(s);
+     })();
+    `
 }
 
 function toPropercase(string){
