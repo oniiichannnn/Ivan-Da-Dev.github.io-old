@@ -168,10 +168,6 @@ function load_animes(){
 }
 
 document.addEventListener("click", function(element){
-    if(element.path[1].id === 'genre'){
-        window.location.replace(`https://oniichann.tk/definition?search=${element.path[1].innerHTML.trim().toLowerCase()}`)
-    }
-
     if(element.path[1].id === 'view') return
     if(!element.path[1].id) return
     let anime = anime_lists.find(a => a.title === element.path[1].id.replace(/\_/g,' '))
@@ -221,7 +217,8 @@ function display_anime(anime){
         })
     }
 
-    document.getElementById("view_genres").innerHTML = anime.genres.map(g => `<strong id="genre">${toPropercase(g)}</strong>`).join(' ')
+    document.getElementById("view_genres").innerHTML = anime.genres.map(g => 
+        `<strong id="genre" onclick="window.location.replace(encodeURL('https://oniichann.tk/definition?search=${g.toLowerCase()}'))">${toPropercase(g)}</strong>`).join(' ')
     document.getElementById("view_rating").innerHTML = `<strong id='card_rating_bigger'>${anime.rating}</strong> / 10`
 
     document.getElementById("view_img").src = `./images/${anime.img}`
@@ -245,6 +242,10 @@ function display_anime(anime){
      (d.head || d.body).appendChild(s);
      })();
     `
+
+    function encodeURL(url){
+        return encodeURIComponent(url)
+    }
 }
 
 function toPropercase(string){
