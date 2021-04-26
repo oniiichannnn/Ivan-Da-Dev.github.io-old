@@ -179,6 +179,7 @@ document.addEventListener("click", function(element){
 function display_anime(anime){
     let getPage = document.getElementById("view")
     document.getElementById("view_title").innerHTML = toPropercase(anime.title)
+    window.location.replace(encodeURI(`https://oniichann.tk/reviews/?anime=${anime.title}`))
     document.getElementById("view_review").innerHTML = anime.review
     .replace(/\*\*[a-zA-Z0-9, \t\n\r]+\*\*/g,function(text){
         return `<strong id='bold'>${text.replace(/\*/g,'')}</strong>`
