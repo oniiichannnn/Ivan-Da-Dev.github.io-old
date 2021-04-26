@@ -87,7 +87,8 @@ const anime_lists = [
  [text](link) - Hyperlink
  @ link/path @ - Attachment
 */
- let currentlyDisplayed = ''
+
+let currentlyDisplayed = ''
 
 const emojis = [
     {
