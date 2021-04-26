@@ -22,7 +22,7 @@ function check(){
         }
     ]
 
-    let get = lists.find(w => w.word.toLowerCase() === decodeURL(document.URL.slice("https://oniichann.tk/definition?search=".length)).toLowerCase())
+    let get = lists.find(w => w.word.toLowerCase() === decodeURL(document.URL).slice("https://oniichann.tk/definition?search=".length).toLowerCase())
     if(!get) return document.getElementsByClassName("error")[0].style.display = 'inherit'
 
     document.getElementsByClassName("display")[0].style.display = "inherit"
