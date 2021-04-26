@@ -103,7 +103,7 @@ body {
     border-radius: 5px;
 
     z-index: 1;
-    font-weight: lighter;
+    font-weight: bold;
 }
 
 #view #view_img{

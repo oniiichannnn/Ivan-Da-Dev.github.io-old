@@ -70,6 +70,14 @@ const anime_lists = [
         genres: ["nudity","ecchi","comedy","magic","action","school","harem","romance"],
         img: "tlr_img.jpg",
         bg: "tlr_bg.jpg"
+    },
+    {
+        title: "oreimo",
+        rating: 6,
+        review: "well....fuck I have to review this anime now\n\nOreimo was like SAO, it was good at the few episodes, I knew when watching episode 1 that it is heavily focused on incest. When starting at episode 1 I loved kirino because I am also a incest lover myself ya know <lenny>, everyone hated Kirino when I saw the comments section lmao, because of her attitude, tho I still liked her despite that. The first season was great, it introduced the characters, introduced the MC and Kirino's character development, but when I was near the ending at season 2, I see the MC rejects all off Kirino's friends who confessed to him and that includes Ayasake @./ayase.jpg@ and I was PISSED at the MC because Ayase is the 2nd best character in the anime, shes popular, cute, knows how to cook and doesn't have a shit attitude. Tho I can relate that the MC only has his eyes for Kirino, when I was watching the last episode, I was excited to see him and Kirino getting married, and they did have a wedding @./oreimo_wedding.jpg@ of course it was not a official wedding and no one attended the wedding either, why? Because they broke up after the wedding......\n\nThis is why I hate it, bruh MC u rejected 4 or 5 cute girls just to get married and break up after it? smh I'm still pissed at the MC",
+        genres: ["incest","comedy","romance","school"],
+        img: "oreimo_img.jpg",
+        bg: "oreimo_bg.png"
     }
 ]
 
@@ -160,6 +168,10 @@ function load_animes(){
 }
 
 document.addEventListener("click", function(element){
+    if(element.path[1].id === 'genre'){
+        window.location.replace(`https://oniichann.tk/definition?search=${element.path[1].innerHTML.trim().toLowerCase()}`)
+    }
+
     if(element.path[1].id === 'view') return
     if(!element.path[1].id) return
     let anime = anime_lists.find(a => a.title === element.path[1].id.replace(/\_/g,' '))
@@ -176,6 +188,7 @@ function display_anime(anime){
         return `<strong id='bold'>${text.replace(/\*/g,'')}</strong>`
     })
     .replace('\n','<br>')
+    .replace(/<lenny>/g,"( ͡° ͜ʖ ͡°)")
 
 
     if(/:[a-zA-Z0-9, \t\n\r]+:/g.test(anime.review) === true){
