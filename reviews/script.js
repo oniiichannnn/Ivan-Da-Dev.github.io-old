@@ -87,6 +87,7 @@ const anime_lists = [
  [text](link) - Hyperlink
  @ link/path @ - Attachment
 */
+ let currentlyDisplayed = ''
 
 const emojis = [
     {
@@ -156,6 +157,7 @@ function load_animes(){
     })
 
     if(document.URL.includes('https://oniichann.tk/reviews/?anime=')){
+        if(currentlyDisplayed === decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length)) return
         if(!anime_lists.find(a => a.title.toLowerCase().includes(decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length)))) return
 
         let anime = anime_lists.find(a => a.title.toLowerCase() === decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length))
@@ -179,6 +181,7 @@ document.addEventListener("click", function(element){
 function display_anime(anime){
     let getPage = document.getElementById("view")
     document.getElementById("view_title").innerHTML = toPropercase(anime.title)
+    currentlyDisplayed = anime.title.toLowerCase()
     window.location.replace(encodeURI(`https://oniichann.tk/reviews/?anime=${anime.title}`))
     document.getElementById("view_review").innerHTML = anime.review
     .replace(/\*\*[a-zA-Z0-9, \t\n\r]+\*\*/g,function(text){
@@ -261,4 +264,5 @@ function back(){
     let getPage = document.getElementById("view")
     getPage.style.display = 'none'
     document.body.style.backgroundImage = `none`
+    currentlyDisplayed = ''
 }
