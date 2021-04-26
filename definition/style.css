@@ -45,6 +45,12 @@ body {
     max-height: 25%;
 }
 
+.error a {
+    text-align: center;
+    font-size: 2rem;
+    color: wheat;
+}
+
 @media only screen and (max-width: 800px) {
     .error img {
         max-width: 50%;
