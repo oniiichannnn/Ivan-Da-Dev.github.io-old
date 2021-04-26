@@ -218,7 +218,7 @@ function display_anime(anime){
     }
 
     document.getElementById("view_genres").innerHTML = anime.genres.map(g => 
-        `<strong id="genre" onclick="window.location.replace(encodeURL('https://oniichann.tk/definition?search=${g.toLowerCase()}'))">${toPropercase(g)}</strong>`).join(' ')
+        `<strong id="genre" onclick="window.location.replace(${encodeURL('https://oniichann.tk/definition?search=${g.toLowerCase()}')})">${toPropercase(g)}</strong>`).join(' ')
     document.getElementById("view_rating").innerHTML = `<strong id='card_rating_bigger'>${anime.rating}</strong> / 10`
 
     document.getElementById("view_img").src = `./images/${anime.img}`
