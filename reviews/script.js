@@ -128,6 +128,15 @@ const emojis = [
 const linkReg = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/g
 
 function load_animes(){
+
+    if(document.URL.includes('https://oniichann.tk/reviews/?anime=')){
+        if(currentlyDisplayed === decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length)) return
+        if(!anime_lists.find(a => a.title.toLowerCase().includes(decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length)))) return
+
+        let anime = anime_lists.find(a => a.title.toLowerCase() === decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length))
+        display_anime(anime)
+    }
+
     anime_lists.sort().forEach(anime => {
         let card = document.createElement("div")
         let img = document.createElement("img")
@@ -156,14 +165,6 @@ function load_animes(){
         Array.from(document.getElementsByClassName("anime_list")).find(e => e.id === anime.title.substring(0,1).toUpperCase())
         .appendChild(card)
     })
-
-    if(document.URL.includes('https://oniichann.tk/reviews/?anime=')){
-        if(currentlyDisplayed === decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length)) return
-        if(!anime_lists.find(a => a.title.toLowerCase().includes(decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length)))) return
-
-        let anime = anime_lists.find(a => a.title.toLowerCase() === decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length))
-        display_anime(anime)
-    }
 
     function decodeURL(url){
         return decodeURIComponent(url)
