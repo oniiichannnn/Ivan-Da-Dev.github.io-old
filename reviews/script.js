@@ -244,7 +244,7 @@ function display_anime(anime){
     `
 
     function encodeURL(url){
-        return encodeURIComponent(url)
+        return encodeURI(url)
     }
 }
 
