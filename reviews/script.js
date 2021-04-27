@@ -78,6 +78,30 @@ const anime_lists = [
         genres: ["incest","comedy","romance","school"],
         img: "oreimo_img.jpg",
         bg: "oreimo_bg.png"
+    },
+    {
+        title: "noragami",
+        rating: 10,
+        review: "I was looking for animes that were similar to the [Monogatari Anime](https://oniichann.tk/reviews/?anime=monogatari%20series) and Noragami was on the list. This anime was pretty normal...action...gods etc. Tho the character development is **yes**, it has the best character development among all the animes I've watched, the characters weren't drawn so good and yet they look so good",
+        genres: ["comedy","slice of life","supernatural"],
+        img: "noragami_img.jpg",
+        bg: "noragami_bg.png"
+    },
+    {
+        title: "my sister my writer",
+        rating: 9,
+        review: "Before you ask why tf would u give this a 9, look at this @./msmw_nudity.jpg@ IS THAT NOT THE MOST CUTEST CREATURE YOU HAVE EVER SEEN???\n\nA lot of people might give it a 7 or 6 because of its animation @./msmw_animation.jpg@ but thats another aspect of why its funny lmaoooooo HER EYES ARE SPLITTING LMAOOO\n\nThe plot itself isn't that bad, the MC becomes a famous author because his sister doesn't want her parents to find out that shes a writer\n\nDid I watch the anime just because of how cute the sister is? yes, do I watch any anime that has cute girls in it? yes",
+        genres: ["incest","nudity","comedy","bad animation"],
+        img: "msmw_img.jpg",
+        bg: "msmw_bg.jpg"
+    },
+    {
+        title: "eromanga sensei",
+        rating: 8.5,
+        review: "Yes I love incest\n\nEromanga sensei is a decent anime despite the amount of hate it gets, the MC's sister likes his **step brother**. Yes, they are not blood related, the MC's father married Sagiri's (the MC's step sister) mom when the MC was around 6 years old. So this makes it totally legal. The plot itself is good, the comedy is good, megumin is good, and no, not the eXpLoSION! megumin, I mean this megumin @./ero_megumin.jpg@ her name is Megumi but she likes to be called megumin because her ass is explosion <lenny>",
+        genres: ["incest","comedy","creator's slice of life","ecchi"],
+        img: "ero_img.jpg",
+        bg: "ero_bg.jpg"
     }
 ]
 
@@ -86,6 +110,7 @@ const anime_lists = [
  :emoji: - Emoji
  [text](link) - Hyperlink
  @ link/path @ - Attachment
+ https://oniichann.tk/reviews/?anime=
 */
 
 
