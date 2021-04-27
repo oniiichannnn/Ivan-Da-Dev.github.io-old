@@ -19,6 +19,11 @@ function check(){
             word: "creator's slice of life",
             definition: "Anime where it shows how creators (manga artists, lightnovel authors and people who work in the production of the anime) spend their day",
             type: "self-made genre"
+        },
+        {
+            word: "bad animation",
+            definition: "anime with bad animation",
+            type: "self-made genre"
         }
     ]
 
@@ -26,11 +31,15 @@ function check(){
     if(!get) return document.getElementsByClassName("error")[0].style.display = 'inherit'
 
     document.getElementsByClassName("display")[0].style.display = "inherit"
-    document.getElementById("subject").innerHTML = get.word
+    document.getElementById("subject").innerHTML = toPropercase(get.word)
     document.getElementById("definition").innerHTML = get.definition
-    document.getElementById("type").innerHTML = get.type
+    document.getElementById("type").innerHTML = toPropercase(get.type)
 
     function decodeURL(url){
         return decodeURIComponent(url)
     }
+}
+
+function toPropercase(string){
+    return string.replace(/(\b\w)/gi, w => w.toUpperCase())
 }
