@@ -211,10 +211,11 @@ function load_animes(){
 
     let loadFromURL = false
 
-    if(document.URL.includes('https://oniichann.tk/reviews/?anime=')){
+    if(
+        document.URL.includes('https://oniichann.tk/reviews/?anime=') && 
+        anime_lists.find(a => a.title.toLowerCase().includes(decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length)))
+        ){
         loadFromURL = true
-
-        if(!anime_lists.find(a => a.title.toLowerCase().includes(decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length)))) return
 
         let anime = anime_lists.find(a => a.title.toLowerCase() === decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length))
         document.getElementsByClassName('comments')[0].style.display = 'inherit'
