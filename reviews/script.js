@@ -152,7 +152,7 @@ const anime_lists = [
         bg: "toradora_bg.jpg"
     },
     {
-        title: "gabriel dropOut",
+        title: "gabriel dropout",
         rating: 10,
         review: "a anime where a top angel at heaven comes to earth and becomes a shut in NEET is very entertaining. They had a character called Satania, shes a demon, and they fucking bullies her for 12 episodes lmaooo @./gd_satania_crying.gif@ Satania never fails to entertain me",
         genres: ["comedy","school"],
