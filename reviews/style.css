@@ -9,7 +9,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.head, .body, #view {
+.head, .body, #view, .comments {
     display: none;
 }
 

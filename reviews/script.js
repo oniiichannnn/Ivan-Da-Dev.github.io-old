@@ -217,6 +217,7 @@ function load_animes(){
         if(!anime_lists.find(a => a.title.toLowerCase().includes(decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length)))) return
 
         let anime = anime_lists.find(a => a.title.toLowerCase() === decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length))
+        document.getElementsByClassName('comments')[0].style.display = 'inherit'
         display_anime(anime)
     }
 
@@ -226,6 +227,7 @@ function load_animes(){
         if(loadFromURL === false && completed === 1){
             document.getElementsByClassName('body')[0].style.display = 'inherit'
             document.getElementsByClassName('head')[0].style.display = 'inherit'
+            document.getElementsByClassName('comments')[0].style.display = 'inherit'
         }
 
         let card = document.createElement("div")
