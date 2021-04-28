@@ -55,9 +55,48 @@ body {
     text-decoration: none;
 }
 
+noscript img {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    max-width: 25%;
+    max-height: 25%;
+}
+
+noscript h1 {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+noscript a {
+    text-align: center;
+    font-size: 2rem;
+    color: wheat;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 @media only screen and (max-width: 800px) {
     .error img {
         max-width: 50%;
         max-height: 50%;
+    }
+
+    noscript img {
+        max-width: 40%;
+        max-height: 40%;
+    }
+    
+    noscript h1 {
+        font-size: 1.6rem;
+    }
+    
+    noscript a {
+        font-size: 1.6rem;
     }
 }
