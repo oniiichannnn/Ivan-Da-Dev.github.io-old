@@ -18,7 +18,7 @@ const anime_lists = [
     {
         title: "the pet girl of sakura hall",
         rating: 6,
-        review: "At first I thought this was a slice of life anime that had a little drama and romance in it but NOPE. It had alot of drama and thats one reason why I gave it a 6. The other reason why i gave it a 6 is because theres no romance, I thought the MC would end up with Shina or the orange hair girl but they didn't :ah:",
+        review: "At first I thought this was a slice of life anime that had a little drama and romance in it but NOPE. It had alot of drama and thats one reason why I gave it a 6. The other reason why I gave it a 6 is because theres no romance, I thought the MC would end up with Shina or the orange hair girl but they didn't :ah:",
         genres: ["school","slice of life","comedy","romance","drama","ecchi"],
         img: "tpgosh_img.jpg",
         bg: "tpgosh_bg.jpg"
@@ -58,7 +58,7 @@ const anime_lists = [
     {
         title: "a sister's all you need",
         rating: 8,
-        review: "At first I thought this was a anime that's focused on incest and how having a sister is better than having a normal girl. Why? Because the first 5 minutes of the first episode gave me that idea lmao @./asiayn_imouto_naked.jpg@ I was so excited :blush: but then as I watch further, its a normal slice of life anime<br><br>The reason I still kept watching it despite it not being a nude anime, is that it has a perverted cute girl who wants to have sex with her senpai @./asiayn_sniff.jfif@ and that is the reason for why I am alive, not only that but it also has this other cute girl @./asayn_miyako.png@ (shes 21 btw despite having a loli face) and the fan service on this is... @./asiayn_egg_eating.gif@ not to mention I wanna see how the mc reacts when he knows that he had a little sister all along and the plot is not too bad either, in the end when we all thought the mc had a anime adaption for his LN but in reality he is just a replacement",
+        review: "At first I thought this was a anime that's focused on incest and how having a sister is better than having a normal girl. Why? Because the first 5 minutes of the first episode gave me that idea lmao @./asiayn_imouto_naked.jpg@ I was so excited :blush: but then as I watch further, its a normal slice of life anime<br><br>The reason I still kept watching it despite it not being a nude anime, is that it has a perverted cute girl who wants to have sex with her senpai @./asiayn_sniff.jfif@ and that is the reason for why I am alive, not only that but it also has this other cute girl @./asayn_miyako.png@ (shes 21 btw despite having a loli face) and the fan service on this is... @./asiayn_egg_eating.gif@ not to mention I wanna see how the MC reacts when he knows that he had a little sister all along and the plot is not too bad either, in the end when we all thought the MC had a anime adaption for his LN but in reality he is just a replacement",
         genres: ["ecchi","comedy","slice of life","romance","creator's slice of life"],
         img: "asayn_img.jpg",
         bg: "asayn_bg.jpg"
@@ -106,7 +106,7 @@ const anime_lists = [
     {
         title: "date a live",
         rating: 8,
-        review: "Imagine a anime that makes the MC cheat on his \"girlfriends\" to save the world, yes, this is that kind of anime\n\nHonestly, the anime is pretty cringy at some times, but hey, if theres cute girls, this means that its a good anime. While I do not know if there will be a 4th season, but there are ALOT of plot holes, such as\n\nHow does the spirits come?\nWhy did Origami fell for shido?\nKurumi's past\nwhere tf is shido's parents?\nwhat is shido? (i mean he can use spirits items and seal spirit's powers)\nhow did kotori become the fire girl?\nwhat does kotori mean by \"I'll kill shido\"?\nwhy tf does DEM want to kill the spirits that badly?\n\nIf you didn't knew this already, they made 2 movies showing Kurumi's past, but not much, it's called Date a Bullet",
+        review: "Imagine a anime that makes the MC cheat on his \"girlfriends\" to save the world, yes, this is that kind of anime\n\nHonestly, the anime is pretty cringy at some times, but hey, if theres cute girls, this means that its a good anime. While I do not know if there will be a 4th season, but there are ALOT of plot holes, such as\n\nHow does the spirits come?\nWhy did Origami fell for shido?\nKurumi's past\nwhere tf is shido's parents?\nwhat is shido? (I mean he can use spirits items and seal spirit's powers)\nhow did kotori become the fire girl?\nwhat does kotori mean by \"I'll kill shido\"?\nwhy tf does DEM want to kill the spirits that badly?\n\nIf you didn't knew this already, they made 2 movies showing Kurumi's past, but not much, it's called Date a Bullet",
         genres: ["ecchi","comedy","romance","harem","supernatural"],
         img: "dal_img.jpg",
         bg: "dal_bg.jpg"
@@ -130,7 +130,7 @@ const anime_lists = [
     {
         title: "hidan no aria",
         rating: 8,
-        review: "This was the first anime that I watched, it's pretty good. Aria is the reason i am obessed with 2d girls lmao @./aria.jpg@ and i also like how the MC is super op but he wants to lay low\n\nWhy did i give this anime a 8 and not a 9 or 10? Because it has a few plot holes, in season 1 they told us that the MC's brother died in a ship wreck tho he saved all the passengers but later on, Riko @./riko_mine.jpg@ says that his brother is her boyfriend and i was like wtf? Wasn't he dead? and that caught my interest even more. When i finished season 1, i watched season 2 despite being sleepy but only to be dissapointed, in season 2, they **COMPLETELY** changed the characters, they changed the mc as well. They add a new plot where a girl wants to be Aria's apprentice and wants to be cool like Aria. They completely forgotten about Shinji and his brother who never appeared (well Shinji did appear but for less than 10 minutes in the **whole** season), oh yeah, Shinji is the mc in season 1. This anime could've been a masterpiece but whoever decided to not peek into Shinji's past completely shitted on the anime",
+        review: "This was the first anime that I watched, it's pretty good. Aria is the reason I am obessed with 2d girls lmao @./aria.jpg@ and I also like how the MC is super op but he wants to lay low\n\nWhy did I give this anime a 8 and not a 9 or 10? Because it has a few plot holes, in season 1 they told us that the MC's brother died in a ship wreck tho he saved all the passengers but later on, Riko @./riko_mine.jpg@ says that his brother is her boyfriend and I was like wtf? Wasn't he dead? and that caught my interest even more. When I finished season 1, I watched season 2 despite being sleepy but only to be dissapointed, in season 2, they **COMPLETELY** changed the characters, they changed the MC as well. They add a new plot where a girl wants to be Aria's apprentice and wants to be cool like Aria. They completely forgotten about Shinji and his brother who never appeared (well Shinji did appear but for less than 10 minutes in the **whole** season), oh yeah, Shinji is the MC in season 1. This anime could've been a masterpiece but whoever decided to not peek into Shinji's past completely shitted on the anime",
         genres: ["comedy","ecchi","romance","action"],
         img: "hna_img.jpg",
         bg: "hna_bg.jpg"
@@ -146,7 +146,7 @@ const anime_lists = [
     {
         title: "toradora",
         rating: 5,
-        review: "Why give it a 5? I'm not really into drama animes, i find them annoying. Why did i watch it? Because i was still a normie when watching this, i was half way through the anime when i found out that i dont like this anime, so i decided that since I've already came this far, might as well finish it. Well I don't have much to say about this anime but Taiga is KAWAI",
+        review: "Why give it a 5? I'm not really into drama animes, I find them annoying. Why did I watch it? Because I was still a normie when watching this, I was half way through the anime when I found out that I dont like this anime, so I decided that since I've already came this far, might as well finish it. Well I don't have much to say about this anime but Taiga is KAWAI",
         genres: ["romance","drama","school"],
         img: "toradora_img.jpg",
         bg: "toradora_bg.jpg"
@@ -280,8 +280,6 @@ function display_anime(anime){
     })
     .replace('\n','<br>')
     .replace(/<lenny>/g,"( ͡° ͜ʖ ͡°)")
-    .replace(new RegExp("i","g"),"I")
-    .replace(new RegExp("mc","g"),"MC")
 
 
     if(/:[a-zA-Z0-9, \t\n\r]+:/g.test(anime.review) === true){
