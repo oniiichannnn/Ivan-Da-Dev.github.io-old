@@ -102,6 +102,62 @@ const anime_lists = [
         genres: ["incest","comedy","creator's slice of life","ecchi"],
         img: "ero_img.jpg",
         bg: "ero_bg.jpg"
+    },
+    {
+        title: "date a live",
+        rating: 8,
+        review: "Imagine a anime that makes the MC cheat on his \"girlfriends\" to save the world, yes, this is that kind of anime\n\nHonestly, the anime is pretty cringy at some times, but hey, if theres cute girls, this means that its a good anime. While I do not know if there will be a 4th season, but there are ALOT of plot holes, such as\n\nHow does the spirits come?\nWhy did Origami fell for shido?\nKurumi's past\nwhere tf is shido's parents?\nwhat is shido? (i mean he can use spirits items and seal spirit's powers)\nhow did kotori become the fire girl?\nwhat does kotori mean by \"I'll kill shido\"?\nwhy tf does DEM want to kill the spirits that badly?\n\nIf you didn't knew this already, they made 2 movies showing Kurumi's past, but not much, it's called Date a Bullet",
+        genres: ["ecchi","comedy","romance","harem","supernatural"],
+        img: "dal_img.jpg",
+        bg: "dal_bg.jpg"
+    },
+    {
+        title: "trinity seven",
+        rating: 10,
+        review: "This is the first harem anime where the MC isn't a pussy and actually has balls. If a girl would have ask him \"hey do u wanna have sex with me?\" he would answer yes with no hesitation, and that's one of the funny aspects about this anime. Not only that but they also have cute characters, one of which is @./yui_kuruta.jpg@ Yui Kuruta, isn't she cute?\n\nBesides that, it has a solid plot, the MC has the power of a demon lord and he gets help of his to save his cousin who died? or vanished, I don't know myself",
+        genres: ["ecchi","romance","supernatural","comedy","magic","harem"],
+        img: "trinity_seven_img.jpg",
+        bg: "trinity_seven_bg.jpg"
+    },
+    {
+        title: "monthly girls' nozaki-kun",
+        rating: 8,
+        review: "Ngl, the first episode was funny as fuck look at a romance anime's bike riding scene @./bike_riding_scene@ (Anime: Zankyou no Terror) good right? now look at this anime's @./mgnk_bike_riding.gif@ This anime doesn't focus much on the romance genre, tho there were some romance in it, a little\n\nOverall, the first episode was funny, the rest just didn't make me laugh as much as the first did",
+        genres: ["comedy","romance","slice of life","creator's slice of life"],
+        img: "mgnk_img.jpg",
+        bg: "mgnk_bg.jpg"
+    },
+    {
+        title: "hidan no aria",
+        rating: 8,
+        review: "This was the first anime that I watched, it's pretty good. Aria is the reason i am obessed with 2d girls lmao @./aria.jpg@ and i also like how the MC is super op but he wants to lay low\n\nWhy did i give this anime a 8 and not a 9 or 10? Because it has a few plot holes, in season 1 they told us that the MC's brother died in a ship wreck tho he saved all the passengers but later on, Riko @./riko_mine.jpg@ says that his brother is her boyfriend and i was like wtf? Wasn't he dead? and that caught my interest even more. When i finished season 1, i watched season 2 despite being sleepy but only to be dissapointed, in season 2, they **COMPLETELY** changed the characters, they changed the mc as well. They add a new plot where a girl wants to be Aria's apprentice and wants to be cool like Aria. They completely forgotten about Shinji and his brother who never appeared (well Shinji did appear but for less than 10 minutes in the **whole** season), oh yeah, Shinji is the mc in season 1. This anime could've been a masterpiece but whoever decided to not peek into Shinji's past completely shitted on the anime",
+        genres: ["comedy","ecchi","romance","action"],
+        img: "hna_img.jpg",
+        bg: "hna_bg.jpg"
+    },
+    {
+        title: "mayoi neko overrun!",
+        rating: 6,
+        review: "This anime was kinda boring, theres not really a plot or anything going on. They do random stuff in every episode, but they have a tsundere, yes, a legendary creature @./myno_fumino.gif@ shes called Fumino. If it weren't for her, I would've dropped this anime at episode 3",
+        genres: ["comedy","slice of life"],
+        img: "mno_.jpg",
+        bg: "mno_bg.jpg"
+    },
+    {
+        title: "toradora",
+        rating: 5,
+        review: "Why give it a 5? I'm not really into drama animes, i find them annoying. Why did i watch it? Because i was still a normie when watching this, i was half way through the anime when i found out that i dont like this anime, so i decided that since I've already came this far, might as well finish it. Well I don't have much to say about this anime but Taiga is KAWAI",
+        genres: ["romance","drama","school"],
+        img: "toradora_img.jpg",
+        bg: "toradora_bg.jpg"
+    },
+    {
+        title: "gabriel dropOut",
+        rating: 10,
+        review: "a anime where a top angel at heaven comes to earth and becomes a shut in NEET is very entertaining. They had a character called Satania, shes a demon, and they fucking bullies her for 12 episodes lmaooo @./gd_satania_crying.gif@ Satania never fails to entertain me",
+        genres: ["comedy","school"],
+        img: "gd_img.jpg",
+        bg: "gd_img.png"
     }
 ]
 
@@ -153,14 +209,25 @@ const linkReg = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]
 
 function load_animes(){
 
+    let loadFromURL = false
+
     if(document.URL.includes('https://oniichann.tk/reviews/?anime=')){
+        loadFromURL = true
+
         if(!anime_lists.find(a => a.title.toLowerCase().includes(decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length)))) return
 
         let anime = anime_lists.find(a => a.title.toLowerCase() === decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length))
         display_anime(anime)
     }
 
+    let completed = 0
     anime_lists.sort().forEach(anime => {
+        completed = completed + 1
+        if(loadFromURL === false && completed === 1){
+            document.getElementsByClassName("body").style.display = "inherit"
+            document.getElementsByClassName("head").style.display = "inherit"
+        }
+
         let card = document.createElement("div")
         let img = document.createElement("img")
         let h1 = document.createElement("h1")
@@ -211,6 +278,8 @@ function display_anime(anime){
     })
     .replace('\n','<br>')
     .replace(/<lenny>/g,"( ͡° ͜ʖ ͡°)")
+    .replace(/i/g,"I")
+    .replace(/mc/g,"MC")
 
 
     if(/:[a-zA-Z0-9, \t\n\r]+:/g.test(anime.review) === true){
