@@ -224,8 +224,8 @@ function load_animes(){
     anime_lists.sort().forEach(anime => {
         completed = completed + 1
         if(loadFromURL === false && completed === 1){
-            document.getElementsByClassName("body").style.display = "inherit"
-            document.getElementsByClassName("head").style.display = "inherit"
+            document.getElementsByClassName('body')[0].style.display = 'inherit'
+            document.getElementsByClassName('head')[0].style.display = 'inherit'
         }
 
         let card = document.createElement("div")
