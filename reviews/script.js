@@ -280,8 +280,8 @@ function display_anime(anime){
     })
     .replace('\n','<br>')
     .replace(/<lenny>/g,"( ͡° ͜ʖ ͡°)")
-    .replace(/i/g,"I")
-    .replace(/mc/g,"MC")
+    .replace(new RegExp("i","g"),"I")
+    .replace(new RegExp("mc","g"),"MC")
 
 
     if(/:[a-zA-Z0-9, \t\n\r]+:/g.test(anime.review) === true){
