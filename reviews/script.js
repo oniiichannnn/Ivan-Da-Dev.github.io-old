@@ -212,11 +212,11 @@ function load_animes(){
 
     if(
         document.URL.split("?anime=")[1] && 
-        anime_lists.find(a => a.title.toLowerCase().includes(decodeURL(document.URL)..split("?anime=")[1].split("&")[0]))
+        anime_lists.find(a => a.title.toLowerCase().includes(decodeURL(document.URL).split("?anime=")[1].split("&")[0]))
         ){
         loadFromURL = true
 
-        let anime = anime_lists.find(a => a.title.toLowerCase().includes(decodeURL(document.URL)..split("?anime=")[1].split("&")[0]))
+        let anime = anime_lists.find(a => a.title.toLowerCase().includes(decodeURL(document.URL).split("?anime=")[1].split("&")[0]))
         document.getElementsByClassName('comments')[0].style.display = 'inherit'
         display_anime(anime)
     }
