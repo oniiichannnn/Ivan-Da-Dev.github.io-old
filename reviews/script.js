@@ -260,7 +260,7 @@ function load_animes(){
         
         if(completed === anime_lists.length){
             if(document.URL.split("&scroll=")[1]){
-                window.scrollTo(Number(document.URL.split("scroll=")[1]))
+                window.scrollTo(0,Number(document.URL.split("scroll=")[1]))
             }
         }
     })
