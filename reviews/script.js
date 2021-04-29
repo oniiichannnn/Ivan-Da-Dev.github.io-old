@@ -355,7 +355,8 @@ function toPropercase(string){
 }
 
 function back(){
-    window.location.replace(`https://oniichann.tk/reviews`)
+    let currentPos = document.URL.split("&scroll=")[1]
+    window.location.replace(`https://oniichann.tk/reviews&scroll=${currentPos}`)
 }
 
 document.getElementById("form").addEventListener("submit", el => {
