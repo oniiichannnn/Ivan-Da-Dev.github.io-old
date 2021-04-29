@@ -474,9 +474,10 @@ noscript a {
         margin-right: 5%;
     }
 
-    .display_results{
-        margin-left: 5%;
-        margin-right: 5%;
+    .display_results .card{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
 
     h1#iden{
