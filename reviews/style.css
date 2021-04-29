@@ -474,6 +474,11 @@ noscript a {
         margin-right: 5%;
     }
 
+    .display_results{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
     h1#iden{
         text-align: center;
     }
