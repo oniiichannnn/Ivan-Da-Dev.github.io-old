@@ -165,7 +165,7 @@ body {
     display: inline-block;
     border-radius: 10px;
     margin: 10px;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .body .anime_list .card .card_img{
@@ -417,7 +417,7 @@ noscript a {
     border-radius: 10px;
     margin: 10px;
     background-color: #18181a;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .display_results .card .card_img{
