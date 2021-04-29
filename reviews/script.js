@@ -349,13 +349,6 @@ function toPropercase(string){
 }
 
 function back(){
-    document.body.style.backgroundColor = '#28282B'
-    document.getElementsByClassName('body')[0].style.display = 'inherit'
-    document.getElementsByClassName('head')[0].style.display = 'inherit'
-
-    let getPage = document.getElementById("view")
-    getPage.style.display = 'none'
-    document.body.style.backgroundImage = `none`
     window.location.replace(`https://oniichann.tk/reviews`)
 }
 
