@@ -211,12 +211,12 @@ function load_animes(){
     let loadFromURL = false
 
     if(
-        document.URL.includes('https://oniichann.tk/reviews/?anime=') && 
-        anime_lists.find(a => a.title.toLowerCase().includes(decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length)))
+        document.URL.split("?anime=")[1] && 
+        anime_lists.find(a => a.title.toLowerCase().includes(decodeURL(document.URL)..split("?anime=")[1].split("&")[0]))
         ){
         loadFromURL = true
 
-        let anime = anime_lists.find(a => a.title.toLowerCase() === decodeURL(document.URL).slice('https://oniichann.tk/reviews/?anime='.length))
+        let anime = anime_lists.find(a => a.title.toLowerCase().includes(decodeURL(document.URL)..split("?anime=")[1].split("&")[0]))
         document.getElementsByClassName('comments')[0].style.display = 'inherit'
         display_anime(anime)
     }
@@ -257,6 +257,12 @@ function load_animes(){
 
         Array.from(document.getElementsByClassName("anime_list")).find(e => e.id === anime.title.substring(0,1).toUpperCase())
         .appendChild(card)
+        
+        if(completed === anime_lists.length){
+            if(document.URL.split("&scroll=")[1]){
+                window.scrollTo(Number(document.URL.split("scroll=")[1]))
+            }
+        }
     })
 
     function decodeURL(url){
@@ -269,7 +275,7 @@ document.addEventListener("click", function(element){
     if(!element.path[1].id) return
     let anime = anime_lists.find(a => a.title === element.path[1].id.replace(/\_/g,' '))
     if(!anime) return
-    window.location.replace(encodeURI(`https://oniichann.tk/reviews/?anime=${anime.title.toLowerCase()}`))
+    window.location.replace(encodeURI(`https://oniichann.tk/reviews/?anime=${anime.title.toLowerCase()}&scroll=${document.documentElement.scrollTop}`))
 })
 
 function display_anime(anime){
