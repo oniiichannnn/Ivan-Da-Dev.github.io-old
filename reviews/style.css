@@ -9,7 +9,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.head, .body, #view, .comments, .display_results, #clear_btn {
+.head, .body, #view, .comments, .display_results, #clear_btn, .search_bar {
     display: none;
 }
 
@@ -165,6 +165,7 @@ body {
     display: inline-block;
     border-radius: 10px;
     margin: 10px;
+    transition: 1s;
 }
 
 .body .anime_list .card .card_img{
@@ -416,6 +417,7 @@ noscript a {
     border-radius: 10px;
     margin: 10px;
     background-color: #18181a;
+    transition: 1s;
 }
 
 .display_results .card .card_img{
@@ -435,6 +437,35 @@ noscript a {
     text-align: center;
     font-family: 'open sans',arial,sans-serif;
     color: white;
+}
+
+.autocomplete-items {
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    /* top: 100%; */
+    width: 50%;
+    margin-left: 0.68%;
+}
+  
+.autocomplete-items div {
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+
+    background-color:#1c1e20;
+    border: solid;
+    border-width: 2px;
+    border-color:#7289da;
+    color: white;
+    border-radius: 5px;
+    margin-top: 6px;
+}
+
+.autocomplete-active {
+    background-color: DodgerBlue !important; 
+    color: #ffffff; 
 }
 
 @media only screen and (max-width: 800px) {
