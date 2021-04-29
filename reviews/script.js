@@ -356,6 +356,7 @@ function back(){
     let getPage = document.getElementById("view")
     getPage.style.display = 'none'
     document.body.style.backgroundImage = `none`
+    window.location.replace(`https://oniichann.tk/reviews`)
 }
 
 document.getElementById("form").addEventListener("submit", el => {
