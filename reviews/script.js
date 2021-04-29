@@ -140,7 +140,7 @@ const anime_lists = [
         rating: 6,
         review: "This anime was kinda boring, theres not really a plot or anything going on. They do random stuff in every episode, but they have a tsundere, yes, a legendary creature @./myno_fumino.gif@ shes called Fumino. If it weren't for her, I would've dropped this anime at episode 3",
         genres: ["comedy","slice of life"],
-        img: "mno_.jpg",
+        img: "mno_img.jpg",
         bg: "mno_bg.jpg"
     },
     {
@@ -152,12 +152,12 @@ const anime_lists = [
         bg: "toradora_bg.jpg"
     },
     {
-        title: "gabriel dropout",
+        title: "gabriel dropOut",
         rating: 10,
         review: "a anime where a top angel at heaven comes to earth and becomes a shut in NEET is very entertaining. They had a character called Satania, shes a demon, and they fucking bullies her for 12 episodes lmaooo @./gd_satania_crying.gif@ Satania never fails to entertain me",
         genres: ["comedy","school"],
         img: "gd_img.jpg",
-        bg: "gd_img.png"
+        bg: "gd_bg.png"
     }
 ]
 
@@ -268,7 +268,7 @@ document.addEventListener("click", function(element){
     if(!element.path[1].id) return
     let anime = anime_lists.find(a => a.title === element.path[1].id.replace(/\_/g,' '))
     if(!anime) return
-    window.location.replace(encodeURI(`https://oniichann.tk/reviews/?anime=${anime.title}`))
+    window.location.replace(encodeURI(`https://oniichann.tk/reviews/?anime=${anime.title.toLowerCase()}`))
 })
 
 function display_anime(anime){
@@ -355,4 +355,65 @@ function back(){
     let getPage = document.getElementById("view")
     getPage.style.display = 'none'
     document.body.style.backgroundImage = `none`
+}
+
+document.getElementById("form").addEventListener("submit", el => {
+    console.log('yes')
+    el.preventDefault()
+
+    let value = document.getElementById('search_input').value
+    if(value === '' || value.length === 0) return
+
+    clearRes()
+
+    let results = search(value)
+    document.getElementsByClassName('display_results')[0].style.display = 'inherit'
+
+    if(results.length === 0){
+        let h1 = document.createElement("h1")
+        h1.innerHTML = "No results found"
+        h1.id = 'no_searches'
+        document.body.appendChild(h1)
+        document.getElementsByClassName("display_results")[0].appendChild(h1)
+    } else {
+        results.sort().forEach(anime => {
+            let card = document.createElement("div")
+            let img = document.createElement("img")
+            let h1 = document.createElement("h1")
+            let h2 = document.createElement("h2")
+    
+            img.src = `./images/${anime.img}`
+            h1.innerHTML = anime.title.replace(/(\b\w)/gi, w => w.toUpperCase())
+            h2.innerHTML = `<strong id='card_rating_bigger'>${anime.rating}</strong> / 10`
+    
+            document.body.appendChild(card)
+            document.body.appendChild(img)
+            document.body.appendChild(h1)
+            document.body.appendChild(h2)
+    
+            card.classList.add("card")
+            card.id = anime.title.replace(/ /g,'_')
+            card.appendChild(h1)
+            card.appendChild(h2)
+            card.appendChild(img)
+    
+            img.classList.add("card_img")
+            h1.classList.add("card_title")
+            h2.classList.add("card_ratings")
+            
+            document.getElementsByClassName("display_results")[0].appendChild(card)
+        })
+    }
+
+    document.getElementById("clear_btn").style.display = 'inherit'
+
+    function search(name){
+        return anime_lists.filter(a => a.title.toLowerCase().includes(name.toLowerCase()))
+    }
+})
+
+function clearRes(){
+    var parent = document.getElementsByClassName("display_results")[0]
+    parent.innerHTML = ''
+    document.getElementById("clear_btn").style.display = 'none'
 }

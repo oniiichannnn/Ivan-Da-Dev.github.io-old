@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Onii Chan | Reviews</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
     <link rel="icon" href="./images/icon.png">
 </head>
 <body onload="load_animes()">
@@ -16,8 +15,6 @@
         <img src="./images/neko.png">
     </noscript>
     <div class="head">
-        <!-- <h1 id="head_title">Hello</h1> -->
-
         <img src="./images/bg.png" id="head_bg" onclick="window.location.replace('./index.html')">
 
         <h1 id="desc">
@@ -45,6 +42,18 @@
             <img id="view_img">
         </div>
     </div>
+
+    <div class="search_bar">
+        <form class="search" id="form">
+            <label for="search_label">Type the Anime name</label><br>
+            <input type="text" id="search_input" name="search_label"><br>
+    
+            <input type="submit" value="submit" class="search_btns" id="submit">
+        </form>
+        <button id="clear_btn" onclick="clearRes()" class="search_btns">clear</button>
+    </div>
+
+    <div class="display_results"></div>
 
     <div class="body">
         <div class="anime_list" id="A">
@@ -173,5 +182,7 @@
         })();
     </script>
     </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>
