@@ -24,6 +24,16 @@ function check(){
             word: "bad animation",
             definition: "anime with bad animation",
             type: "self-made genre"
+        },
+        {
+            word: "cute",
+            definition: "cute anime",
+            type: "self-made genre"
+        },
+        {
+            word: "0 to hero",
+            definition: "anime where the MC starts from 0 and progresses to be a hero",
+            type: "self-made genre"
         }
     ]
 
