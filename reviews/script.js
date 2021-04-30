@@ -259,8 +259,10 @@ function load_animes(){
         .appendChild(card)
         
         if(completed === anime_lists.length){
-            if(document.URL.split("&scroll=")[1]){
-                window.scrollTo(0,Number(document.URL.split("scroll=")[1]))
+            if(document.URL.split("&scroll=")[1] || document.URL.split("?scroll=")[1]){
+                if(document.getElementsByClassName('body')[0].style.display === 'none') return
+                let pos = Number(document.URL.split("&scroll=")[1] || document.URL.split("?scroll=")[1])
+                window.scrollTo(0,pos)
             }
         }
     })
@@ -356,7 +358,7 @@ function toPropercase(string){
 
 function back(){
     let currentPos = document.URL.split("&scroll=")[1]
-    window.location.replace(`https://oniichann.tk/reviews&scroll=${currentPos}`)
+    window.location.replace(`https://oniichann.tk/reviews/?scroll=${currentPos}`)
 }
 
 document.getElementById("form").addEventListener("submit", el => {
