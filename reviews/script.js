@@ -377,6 +377,9 @@ function display_anime(anime){
     })
     .replace('\n','<br>')
     .replace(/<lenny>/g,"( ͡° ͜ʖ ͡°)")
+    .replace(/\bi\b/g,'I')
+    .replace(/\bmc\b/g,'MC')
+    .replace(/\bmc's\b/g,'MC\'s')
 
 
     if(/:[a-zA-Z0-9, \t\n\r]+:/g.test(anime.review) === true){
