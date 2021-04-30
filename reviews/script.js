@@ -238,6 +238,14 @@ const anime_lists = [
         genres: ["comedy","fantasy","slice of life","isekai"],
         img: "oc_img.jpg",
         bg: "oc_bg.jpg"
+    },
+    {
+        title: "saekano: how to raise a boring girlfriend",
+        rating: 8,
+        review: "It's like toradora, it was comedy at first and then a shit ton of drama at the end. I felt bad for the girls at the end who couldn't be with the MC but thats all there is to it, the plot is good, characters, good, drama, bad",
+        genres: ["romance","creator's slice of life","comedy"],
+        img: "saekano_img.jpg",
+        bg: "saekano_bg.jpg"
     }
 ]
 
