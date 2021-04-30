@@ -47,6 +47,8 @@ body {
     text-align: center;
     align-items: center;
     justify-content: center;
+
+    transition: 0.5s;
 }
 
 .buttons a:hover {
