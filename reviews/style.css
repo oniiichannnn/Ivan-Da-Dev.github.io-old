@@ -335,6 +335,8 @@ noscript a {
     margin-left: auto;
     margin-right: auto;
     display: block;
+
+    caret-color: #7289da;
 }
 
 .search input#submit{
