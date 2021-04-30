@@ -158,6 +158,86 @@ const anime_lists = [
         genres: ["comedy","school"],
         img: "gd_img.jpg",
         bg: "gd_bg.png"
+    },
+    {
+        title: "the demon girl next door",
+        rating: 10,
+        review: "A anime where the MC has to kill a magic girl in order to regain their clan's power is a dark anime @./tdgnd_sowwy.jpg@ but if its this anime then there shall be no darkness\n\nThe plot of this anime is just as I mentioned above, the MC has to kill a magic girl in order to regain her family's power. You might think that she'll show us how a normal human being who got turned into a demon in one night kill a magic girl right? no? well sucks to suck because she doesn't, she shows us how easy she is to be decieved but thats what makes the anime very funny and cute at the same time despite having a dark plot @./tdgnd_eye_juice.png@",
+        genres: ["slice of life","comedy","cute"],
+        img: "tdgnd_img.jpg",
+        bg: "tdgnd_bg.jpg"
+    },
+    {
+        title: "danMachi",
+        rating: 8,
+        review: "The first season was good, it caught all my interest and I end up finishing it in less than 12 hours. But from that point, the anime went downhill for me, the first season gave the MC the target to win aiz's @./danmachi_aiz.png@ heart and be at the same leve as her, but as u can see from the thumbnails of the second and 3rd season, @./danmachi_s2.jpg@ @./danmachi_s3.jpg@ it looks like bell stuck his nose into some bad business which as u can guess, has nothing to do with being equally skilled with aiz nor winning aiz's heart. In fact, in s3, there was one time where bell actually **faught** Aiz in order to save the monsters\n\nMoreover, I was hoping Bell would end up with aiz or hestia at the end because of the romance genre tho sadly, he doesn't\n\nseason 4 is coming in 2022 so I'll update this when I watched it",
+        genres: ["romance","comedy","action","0 to hero","ecchi"],
+        img: "danmachi_img.jpg",
+        bg: "danmachi_bg.jpg"
+    },
+    {
+        title: "hello world",
+        rating: 10,
+        review: "This was and will always be the best romance movie, not anime, I've ever watched. The story where the MC discovers that he is actually living in a data world (No one calls it that only I do lmao) inside a database is so good to start with. Then the older or future MC comes and steals his girl lmao <lenny> rip MC. The girl gets stolen but soon brought back to her own world, it is a bit sad that the future MC died. Tho the plot twist in the end tho, we all thought that the girl (Ruri) @./ruri.jpg@ died because a lightning struck her, and thats what I thought happened in the real world as well. But NOPE, it was the MC who died, well not died but was unconcious for the whole time and it was his wife (which is also Ruri btw) who kept trying to bring him back, if you didn't notice this, the animation style in the movie (for the most part) was 3d but when the MC wakes up in his real world, the animation was in 2d as u can see this is\n\n**The 3D scenes:** @./hello_world_3d@ **The Ending scene (2D)**: @./hello_world_2d@ and Kai Tanaka commented this on the comments section of Hello world in AnimeDao\n\nIf you’ll look closely, you’ll notice that all the events of the “past” and “present-past” timelines involve 3-D animation, whereas, the events of the final “present timeline” have 2-D animation. This creates a contrast between the simulated and actual events of the anime’s storyline. Also, **since the movie is all about complex programming and its manipulation, its title alludes to the “Hello World” program which is often used to represent the basic syntax of a programming language**\n\nThats also a unique aspect about their animations and holy fuck I JUST DISCOVERED THERES A SEQUEL CALLED ANOTHER WORLD, I will watch it and update this when I am done\n\n\nI have finished watching the sequel for it, and boy, not gonna lie I was dissapointed. I was hoping, since its a sequel, that they would make another movie or heck turn it into half season or full season anime but nope, all I saw was 3 OVAs showing how the MC spent his life after 10 years",
+        genres: ["action","isekai","romance","science fiction"],
+        img: "hello_world_img.jpg",
+        bg: "hello_world_bg.jpg"
+    },
+    {
+        title: "i want to eat your pancrease",
+        rating: 2,
+        review: "Why did I gave it such a low rating? because it was boring and I didn't understand what the meaning of it was. Sakura mentioned that theres a rumor where if one of ur body's organs are failing or something, u eat that, for example, if ur stomach is broken, u eat a stomach\n\nThe anime is like SAO, it was good for 12 episodes, but it went downhill, wait, no. This anime wasn't good to begin with, the plot keeps telling us that Sakura was gonna die of her pancrease failing to work but in the end, surprise surprise, she gets murdered. \"...\" was what I thought when I saw that, well it didn't felt sad at all. If she was dying and the MC was besides her death bed, I would tear up a bit (probaly not) but instead they were like \"holy fuck it's been 1 hour 32 minutes, aight lets murder Sakura because we are running out of budget\"\n\nBet alot of people who cried at the movie will say my review is shit and that I should be the one dying and not Sakura but guess what, my reviews are shit tho I am still gonna live as healthy as Sakura",
+        genres: ["romance"],
+        img: "iwteyp_img.jpg",
+        bg: "iwteyp_bg.jpg"
+    },
+    {
+        title: "arpeggio of blue steel: ars nova",
+        rating: 8,
+        review: "This anime is good. Tho sadly, a lot of people don't know it's existence. The plot is there are bad battle ships, the MC's battleship is also one of them but she (yes the battle ship is a girl) rebelled against them and obeyed the MC regardless if it means sinking her own former allies. There is some character development for 1-401 @./ars_nova_img.jpg@ this is her, the battleship I mentioned earlier, she has a robot like attitude at first but at the end, when the MC almost freezed to death, she saved him despite the MC told him not to, that's very touching ya know\n\nReason why I gave it a 8 and not a 10? because the MC doesn't end up with 1-401",
+        genres: ["science fiction","romance"],
+        img: "ars_nova_img.jpg",
+        bg: "ars_nova_bg.png"
+    },
+    {
+        title: "recently, my sister is unusual",
+        rating: 8,
+        review: "I found this anime when I typed \"saiki\" in the search bar because I wanted to watch **The Disastrous Life of Saiki K.** and this anime popped up at the corner of my eye lmao. The anime is what you would expect, alot of fan service, not much plot, well that plot involves fan service. The sister is forced to love her brother but slowly she does love him\n\nWhy give it a 8? because she still doesn't fully love her brother in the end and the angel doesn't go away as well, turns out they only completed the first floor and need to complete more floors in order for the angel to reach heaven",
+        genres: ["ecchi","comedy"],
+        img: "rmsiu_img.jpg",
+        bg: "rmsiu_bg.jpg"
+    },
+    {
+        title: "hensuki: are you willing to fall in love with a pervert, as long as she's a cutie?",
+        rating: 7,
+        review: "Watched this anime when I was a normie and its pretty good. I like how they used a cinderella reference but with panties, and that the mc is looking for this \"cinderella\" but ignores all the cute girls he has surrounding him. I would've preferred him dating his sister in the end (btw his sister was the cinderella), don't worry, they are not blood related, but the MC still can't do it, what a pussy am I right?",
+        genres: ["comedy","ecchi","school","harem","romance"],
+        img: "hensuki_img.jpg",
+        bg: "hensuki_bg.jpg"
+    },
+    {
+        title: "horimiya",
+        rating: 7.5,
+        review: "This shows how the MC who was a loner in his past, get a fucking cute girlfriend who likes to be treated like trash. This anime, for the most part, increased my love towards 2d girls. I have nothing much to say about this anime, it is good but it is not good, it is bad but it is not bad\n\na joke that I saw someone made:\neveryone simp for hori because shes a horr <lenny>",
+        genres: ["romance","comedy","slice of life"],
+        img: "horimiya_img.png",
+        bg: "horimiya_bg.jpg"
+    },
+    {
+        title: "myriad colors phantom world",
+        rating: 9.5,
+        review: "Absolutely loved this anime. It ranks #1 in among all scenario animes I've watched (scenario animes are animes that has a different situation for each episode, each episode theres new content and none or not much of it was taken from the previous episode, it could also be called a \"no plot\" anime). It has cute characters @./mcpw_characters.jpg@ even the villians are cute @./mcpw_villian.jpg@ it makes me relax everytime when watching this anime. Sad that it couldn't get a season 2 but it'll remain in my memory as the best scenario anime",
+        genres: ["comedy","supernatural","romance","slice of life"],
+        img: "mcpw_img.jpg",
+        bg: "mcpw_bg.jpg"
+    },
+    {
+        title: "outbreak company",
+        rating: 10,
+        review: "This was the real first anime that I ever watched, I hardly remember anything about this anime (because I watched it when I was 7) and this was what maked me so into anime, it has ecchi, comedy, romance? Regardless, I remembered it was good",
+        genres: ["comedy","fantasy","slice of life","isekai"],
+        img: "oc_img.jpg",
+        bg: "oc_bg.jpg"
     }
 ]
 
