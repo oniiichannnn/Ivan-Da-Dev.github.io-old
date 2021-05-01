@@ -32,12 +32,12 @@ body {
     font-size: 5rem;
 }
 
-.head h1#desc, .head h1#note, .head h1#comments_btn{
+.head h1#desc, .head h1#comments_btn{
     background-color: #18181a;
     color: white;
     text-align: center;
     font-size: 2.5rem;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-left: 2rem;
     margin-right: 2rem;
 }
@@ -469,7 +469,7 @@ noscript a {
 }
 
 .autocomplete-active {
-    background-color: DodgerBlue !important;
+    background-color: #95acff !important;
     color: #ffffff;
 }
 
