@@ -349,6 +349,19 @@ noscript a {
     color: white;
     margin-top: 10px;
     margin-left: 0.68%;
+
+    transition: background-color 1.5s;
+}
+
+.search input#submit:hover{
+    background-color:#7289da;
+    border: solid;
+    border-width: 2px;
+    border-color:#1c1e20;
+    border-radius: 5px;
+    color: white;
+    margin-top: 10px;
+    margin-left: 0.68%;
 }
 
 .search label{
@@ -371,11 +384,6 @@ noscript a {
     font-size: 2rem;
     width: 10rem;
     /* transition: 1s; */
-}
-
-.search_btns:hover {
-    /* background-color:rgba(124, 119, 119, 0.65); */
-    background-color: gainsboro;
 }
 
 #no_searches {

@@ -318,6 +318,7 @@ function load_animes(){
             document.getElementsByClassName('head')[0].style.display = 'inherit'
             document.getElementsByClassName('comments')[0].style.display = 'inherit'
             document.getElementsByClassName('search_bar')[0].style.display = 'inherit'
+            document.body.style.overflow = 'visible'
         }
 
         let card = document.createElement("div")
