@@ -38,6 +38,11 @@
     </div>
 
     <div id="view">
+        <div id="nsfw_layer">
+            <h1>This review contains NSFW content that may be unsuitable for some users, do you wish to proceed?</h1>
+            <button id="proceed" onclick="proceed()">Yes, let me in</button>
+            <button id="go_back" onclick="back()">No, take me back</button>
+        </div>
         <div id="layer"></div>
         <div id="content">
             <h1 id="view_title"></h1>
@@ -54,7 +59,7 @@
         <form class="search" id="form">
             <label for="search_label">Type the Anime name</label><br>
             <input type="text" id="search_input" name="search_label" autocomplete="off"><br>
-    
+
             <input type="submit" value="submit" class="search_btns" id="submit">
         </form>
         <button id="clear_btn" onclick="clearRes()" class="search_btns">clear</button>

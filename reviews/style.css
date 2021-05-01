@@ -450,7 +450,7 @@ noscript a {
     width: 50%;
     margin-left: 0.68%;
 }
-  
+
 .autocomplete-items div {
     font-size: 2rem;
     padding: 10px;
@@ -466,8 +466,29 @@ noscript a {
 }
 
 .autocomplete-active {
-    background-color: DodgerBlue !important; 
-    color: #ffffff; 
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+}
+
+#view #nsfw_layer {
+    position: absolute;
+    background-color: black;
+    opacity: 0.7;
+    width: max-content;
+    height: max-content;
+    overflow: hidden;
+}
+
+#view #nsfw_layer h1 {
+    text-align: center;
+    position: relative;
+}
+
+#view #nsfw_layer button {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    position: relative;
 }
 
 @media only screen and (max-width: 800px) {
@@ -496,11 +517,11 @@ noscript a {
         max-width: 40%;
         max-height: 40%;
     }
-    
+
     noscript h1 {
         font-size: 1.6rem;
     }
-    
+
     noscript a {
         font-size: 1.6rem;
     }

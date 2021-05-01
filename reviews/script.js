@@ -61,7 +61,8 @@ const anime_lists = [
         review: "At first I thought this was a anime that's focused on incest and how having a sister is better than having a normal girl. Why? Because the first 5 minutes of the first episode gave me that idea lmao @./asiayn_imouto_naked.jpg@ I was so excited :blush: but then as I watch further, its a normal slice of life anime<br><br>The reason I still kept watching it despite it not being a nude anime, is that it has a perverted cute girl who wants to have sex with her senpai @./asiayn_sniff.jfif@ and that is the reason for why I am alive, not only that but it also has this other cute girl @./asayn_miyako.png@ (shes 21 btw despite having a loli face) and the fan service on this is... @./asiayn_egg_eating.gif@ not to mention I wanna see how the MC reacts when he knows that he had a little sister all along and the plot is not too bad either, in the end when we all thought the MC had a anime adaption for his LN but in reality he is just a replacement",
         genres: ["ecchi","comedy","slice of life","romance","creator's slice of life"],
         img: "asayn_img.jpg",
-        bg: "asayn_bg.jpg"
+        bg: "asayn_bg.jpg",
+        nsfw: true
     },
     {
         title: "to love ru",
@@ -299,7 +300,7 @@ function load_animes(){
     let loadFromURL = false
 
     if(
-        document.URL.split("?anime=")[1] && 
+        document.URL.split("?anime=")[1] &&
         anime_lists.find(a => a.title.toLowerCase().includes(decodeURL(document.URL).split("?anime=")[1].split("&")[0]))
         ){
         loadFromURL = true
@@ -345,7 +346,7 @@ function load_animes(){
 
         Array.from(document.getElementsByClassName("anime_list")).find(e => e.id === anime.title.substring(0,1).toUpperCase())
         .appendChild(card)
-        
+
         if(completed === anime_lists.length){
             if(document.URL.split("&scroll=")[1] || document.URL.split("?scroll=")[1]){
                 if(document.getElementsByClassName('body')[0].style.display === 'none') return
@@ -412,7 +413,7 @@ function display_anime(anime){
         })
     }
 
-    document.getElementById("view_genres").innerHTML = anime.genres.map(g => 
+    document.getElementById("view_genres").innerHTML = anime.genres.map(g =>
         `<strong id="genre" onclick="window.location.replace("${encodeURL(`https://oniichann.tk/definition?search=${g.toLowerCase()}`)}")">${toPropercase(g)}</strong>`).join(' ')
     document.getElementById("view_rating").innerHTML = `<strong id='card_rating_bigger'>${anime.rating}</strong> / 10`
 
@@ -438,6 +439,10 @@ function display_anime(anime){
      })();
     `
 
+    if(!anime.nsfw){
+        document.getElementById("nsfw_layer").style.display = 'none'
+    }
+
     function encodeURL(url){
         return encodeURI(url)
     }
@@ -450,6 +455,10 @@ function toPropercase(string){
 function back(){
     let currentPos = document.URL.split("&scroll=")[1]
     window.location.replace(`https://oniichann.tk/reviews/?scroll=${currentPos}`)
+}
+
+function proceed(){
+    document.getElementById("nsfw_layer").style.display = 'none'
 }
 
 document.getElementById("form").addEventListener("submit", el => {
@@ -476,26 +485,26 @@ document.getElementById("form").addEventListener("submit", el => {
             let img = document.createElement("img")
             let h1 = document.createElement("h1")
             let h2 = document.createElement("h2")
-    
+
             img.src = `./images/${anime.img}`
             h1.innerHTML = anime.title.replace(/(\b\w)/gi, w => w.toUpperCase())
             h2.innerHTML = `<strong id='card_rating_bigger'>${anime.rating}</strong> / 10`
-    
+
             document.body.appendChild(card)
             document.body.appendChild(img)
             document.body.appendChild(h1)
             document.body.appendChild(h2)
-    
+
             card.classList.add("card")
             card.id = anime.title.replace(/ /g,'_')
             card.appendChild(h1)
             card.appendChild(h2)
             card.appendChild(img)
-    
+
             img.classList.add("card_img")
             h1.classList.add("card_title")
             h2.classList.add("card_ratings")
-            
+
             document.getElementsByClassName("display_results")[0].appendChild(card)
         })
     }
@@ -618,11 +627,11 @@ function autocomplete(inp, arr) {
         closeAllLists(e.target);
     });
   }
-  
+
   /*An array containing all the country names in the world:*/
 
   let animes = []
-  
+
   for(var i = 0 ; i < anime_lists.length ; i++){
         animes.push(toPropercase(anime_lists[i].title))
   }
