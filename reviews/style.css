@@ -112,8 +112,8 @@ body {
 }
 
 #view #view_img{
-    max-height: 80%;
-    max-width: 70%;
+    max-height: 50%;
+    max-width: 40%;
 
     z-index: 0;
     display: block;
