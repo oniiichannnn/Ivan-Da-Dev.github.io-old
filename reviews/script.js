@@ -441,6 +441,7 @@ function display_anime(anime){
 
     if(!anime.nsfw){
         document.getElementById("nsfw_layer").style.display = 'none'
+        document.body.style.overflow = 'visible'
     }
 
     function encodeURL(url){
