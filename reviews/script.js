@@ -461,6 +461,7 @@ function back(){
 
 function proceed(){
     document.getElementById("nsfw_layer").style.display = 'none'
+    document.body.style.overflow = 'visible'
 }
 
 document.getElementById("form").addEventListener("submit", el => {

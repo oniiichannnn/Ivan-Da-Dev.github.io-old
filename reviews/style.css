@@ -355,13 +355,7 @@ noscript a {
 
 .search input#submit:hover{
     background-color:#7289da;
-    border: solid;
-    border-width: 2px;
-    border-color:#1c1e20;
-    border-radius: 5px;
     color: white;
-    margin-top: 10px;
-    margin-left: 0.68%;
 }
 
 .search label{
@@ -492,44 +486,37 @@ noscript a {
 #view #nsfw_layer h1 {
     text-align: center;
     color: white;
+    font-size: 1.5rem;
+    margin-right: 20%;
+    margin-left: 20%;
 }
 
 #view #nsfw_layer button {
     margin-right: auto;
     margin-left: auto;
     display: block;
-    position: relative;
 
-    background-color:#1c1e20;
-    border: solid;
-    border-width: 2px;
-    border-color:#7289da;
     border-radius: 5px;
     margin-top: 10px;
-    margin-left: 0.68%;
+    color: white;
 
-    transition: background-color 1.5s;
+    transition: 1.5s;
+    font-size: 1.5rem;
 }
 
 #proceed {
-    color: #23d160;
+    background-color: #23d160;
 }
 
 #go_back {
-    color: rgb(241, 63, 63);
+    background-color: rgb(241, 63, 63);
 }
 
 #proceed:hover {
-    background-color: #23d160;
-    color: white;
-    border-color:#1c1e20;
     border-radius: 0px;
 }
 
 #go_back:hover {
-    background-color: rgb(241, 63, 63);
-    color: white;
-    border-color:#1c1e20;
     border-radius: 0px;
 }
 
