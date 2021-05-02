@@ -6,7 +6,8 @@ const waifu_lists = [
         rating: 10,
         bday: 'November 3rd',
         nsfw: true,
-        age: 13
+        age: 13,
+        bg: "yuuki_mikan_bg.jpg"
     }
 ]
 
@@ -43,16 +44,21 @@ function load_waifus(){
     waifu_lists.sort().forEach(waifu => {
         let card = document.createElement("div")
         let img = document.createElement("img")
+        // let bg = document.createElement("img")
         let h1 = document.createElement("h1")
+        // let layer = document.createElement("div")
         // let h2 = document.createElement("h2")
 
         img.src = `./images/${waifu.img}`
+        // bg.src = `./images/${waifu.bg}`
         h1.innerHTML = waifu.name.replace(/(\b\w)/gi, w => w.toUpperCase())
         // h2.innerHTML = `${waifu.nsfw === true ? "NSFW" : ""}`
 
         document.body.appendChild(card)
         document.body.appendChild(img)
+        // document.body.appendChild(bg)
         document.body.appendChild(h1)
+        // document.body.appendChild(layer)
         // document.body.appendChild(h2)
 
         card.classList.add("card")
@@ -60,12 +66,16 @@ function load_waifus(){
         card.appendChild(h1)
         // card.appendChild(h2)
         card.appendChild(img)
+        // card.appendChild(bg)
+        // card.appendChild(layer)
 
         img.classList.add("card_img")
         h1.classList.add("card_name")
+        // bg.classList.add("card_bg")
+        // layer.classList.add("card_bg_layer")
         // h2.classList.add("card_nsfw")
 
-        Array.from(document.getElementsByClassName("waifu_list")).find(e => e.id === waifu.name.substring(0,1).toUpperCase())
+        document.getElementsByClassName("body")[0]
         .appendChild(card)
     })
 }
