@@ -94,8 +94,7 @@ const anime_lists = [
         review: "Before you ask why tf would u give this a 9, look at this @./msmw_nudity.jpg@ IS THAT NOT THE MOST CUTEST CREATURE YOU HAVE EVER SEEN???\n\nA lot of people might give it a 7 or 6 because of its animation @./msmw_animation.jpg@ but thats another aspect of why its funny lmaoooooo HER EYES ARE SPLITTING LMAOOO\n\nThe plot itself isn't that bad, the MC becomes a famous author because his sister doesn't want her parents to find out that shes a writer\n\nDid I watch the anime just because of how cute the sister is? yes, do I watch any anime that has cute girls in it? yes",
         genres: ["incest","nudity","comedy","bad animation"],
         img: "msmw_img.jpg",
-        bg: "msmw_bg.jpg",
-        nsfw: true
+        bg: "msmw_bg.jpg"
     },
     {
         title: "eromanga sensei",
@@ -119,7 +118,8 @@ const anime_lists = [
         review: "This is the first harem anime where the MC isn't a pussy and actually has balls. If a girl would have ask him \"hey do u wanna have sex with me?\" he would answer yes with no hesitation, and that's one of the funny aspects about this anime. Not only that but they also have cute characters, one of which is @./yui_kuruta.jpg@ Yui Kuruta, isn't she cute?\n\nBesides that, it has a solid plot, the MC has the power of a demon lord and he gets help of his to save his cousin who died? or vanished, I don't know myself",
         genres: ["ecchi","romance","supernatural","comedy","magic","harem"],
         img: "trinity_seven_img.jpg",
-        bg: "trinity_seven_bg.jpg"
+        bg: "trinity_seven_bg.jpg",
+        nsfw: true
     },
     {
         title: "monthly girls' nozaki-kun",
@@ -180,7 +180,7 @@ const anime_lists = [
     {
         title: "hello world",
         rating: 10,
-        review: "This was and will always be the best romance movie, not anime, I've ever watched. The story where the MC discovers that he is actually living in a data world (No one calls it that only I do lmao) inside a database is so good to start with. Then the older or future MC comes and steals his girl lmao <lenny> rip MC. The girl gets stolen but soon brought back to her own world, it is a bit sad that the future MC died. Tho the plot twist in the end tho, we all thought that the girl (Ruri) @./ruri.jpg@ died because a lightning struck her, and thats what I thought happened in the real world as well. But NOPE, it was the MC who died, well not died but was unconcious for the whole time and it was his wife (which is also Ruri btw) who kept trying to bring him back, if you didn't notice this, the animation style in the movie (for the most part) was 3d but when the MC wakes up in his real world, the animation was in 2d as u can see this is\n\n**The 3D scenes:** @./hello_world_3d@ **The Ending scene (2D)**: @./hello_world_2d@ and Kai Tanaka commented this on the comments section of Hello world in AnimeDao\n\nIf you’ll look closely, you’ll notice that all the events of the “past” and “present-past” timelines involve 3-D animation, whereas, the events of the final “present timeline” have 2-D animation. This creates a contrast between the simulated and actual events of the anime’s storyline. Also, **since the movie is all about complex programming and its manipulation, its title alludes to the “Hello World” program which is often used to represent the basic syntax of a programming language**\n\nThats also a unique aspect about their animations and holy fuck I JUST DISCOVERED THERES A SEQUEL CALLED ANOTHER WORLD, I will watch it and update this when I am done\n\n\nI have finished watching the sequel for it, and boy, not gonna lie I was dissapointed. I was hoping, since its a sequel, that they would make another movie or heck turn it into half season or full season anime but nope, all I saw was 3 OVAs showing how the MC spent his life after 10 years",
+        review: "This was and will always be the best romance movie, not anime, I've ever watched. The story where the MC discovers that he is actually living in a data world (No one calls it that only I do lmao) inside a database is so good to start with. Then the older or future MC comes and steals his girl lmao <lenny> rip MC. The girl gets stolen but soon brought back to her own world, it is a bit sad that the future MC died. Tho the plot twist in the end tho, we all thought that the girl (Ruri) @./ruri.jpg@ died because a lightning struck her, and thats what I thought happened in the real world as well. But NOPE, it was the MC who died, well not died but was unconcious for the whole time and it was his wife (which is also Ruri btw) who kept trying to bring him back, if you didn't notice this, the animation style in the movie (for the most part) was 3d but when the MC wakes up in his real world, the animation was in 2d as u can see this is\n\n**The 3D scenes:** @./hello_world_3d.jpg@ **The Ending scene (2D)**: @./hello_world_2d.jpg@ and Kai Tanaka commented this on the comments section of Hello world in AnimeDao\n\nIf you’ll look closely, you’ll notice that all the events of the “past” and “present-past” timelines involve 3-D animation, whereas, the events of the final “present timeline” have 2-D animation. This creates a contrast between the simulated and actual events of the anime’s storyline. Also, **since the movie is all about complex programming and its manipulation, its title alludes to the “Hello World” program which is often used to represent the basic syntax of a programming language**\n\nThats also a unique aspect about their animations and holy fuck I JUST DISCOVERED THERES A SEQUEL CALLED ANOTHER WORLD, I will watch it and update this when I am done\n\n\nI have finished watching the sequel for it, and boy, not gonna lie I was dissapointed. I was hoping, since its a sequel, that they would make another movie or heck turn it into half season or full season anime but nope, all I saw was 3 OVAs showing how the MC spent his life after 10 years",
         genres: ["action","isekai","romance","science fiction"],
         img: "hello_world_img.jpg",
         bg: "hello_world_bg.jpg"
@@ -375,7 +375,7 @@ function display_anime(anime){
     let getPage = document.getElementById("view")
     document.getElementById("view_title").innerHTML = toPropercase(anime.title)
     document.getElementById("view_review").innerHTML = anime.review
-    .replace(/\*\*[a-zA-Z0-9, \t\n\r]+\*\*/g,function(text){
+    .replace(/\*\*[a-zA-Z0-9(\!|\.|\:|\;|\"|\'|\&|\^|\%|\$|\#|\@|\*|\(|\)|\||\<|\>|\/), \t\n\r]+\*\*/g,function(text){
         return `<strong id='bold'>${text.replace(/\*/g,'')}</strong>`
     })
     .replace('\n','<br>')
