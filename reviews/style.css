@@ -15,6 +15,7 @@ body {
 }
 
 .head img#head_bg {
+    margin-top: 10%;
     max-width: 700px;
     max-height: 700px;
     width: 70%;
@@ -100,6 +101,7 @@ body {
 }
 
 #view #view_review{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
     text-shadow: 0px 5px 18px black;
     font-size: 2rem;
@@ -288,6 +290,8 @@ body {
     border: solid;
     border-width: 2px;
     border-color:#7289da;
+
+    transition: 0.5s;
 }
 
 #cmnts_link:hover{
@@ -502,6 +506,8 @@ noscript a {
 
     transition: 1.5s;
     font-size: 1.5rem;
+    border: none;
+    outline: none;
 }
 
 #proceed {
@@ -518,6 +524,41 @@ noscript a {
 
 #go_back:hover {
     border-radius: 0px;
+}
+
+.nav_bar {
+    position: absolute;
+    width: 100%;
+    right: 0px;
+    top: 0px;
+    background-color: black;
+
+    box-shadow: 0px -5px 18px black;
+}
+
+.nav_bar a {
+    background-color: black;
+    border: #95acff;
+    border-width: 2px;
+
+    display: inline;
+    font-size: 2rem;
+    color: white;
+    float: right;
+    margin: 10px;
+
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    transition: 0.5s;
+}
+
+.nav_bar a:hover{
+    color: wheat;
+}
+
+.nav_bar a#current{
+    color: wheat;
 }
 
 @media only screen and (max-width: 800px) {
@@ -553,5 +594,18 @@ noscript a {
 
     noscript a {
         font-size: 1.6rem;
+    }
+
+    #view #view_img{
+        max-height: 80%;
+        max-width: 70%;
+    }
+
+    #view #view_review{
+        font-size: 1.5rem;
+    }
+
+    .head img#head_bg {
+        margin-top: 20%;
     }
 }
