@@ -43,9 +43,9 @@ const linkReg = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]
 function load_waifus(){
     waifu_lists.sort().forEach(waifu => {
         let card = document.createElement("div")
+        let h1 = document.createElement("h1")
         let img = document.createElement("img")
         // let bg = document.createElement("img")
-        let h1 = document.createElement("h1")
         // let layer = document.createElement("div")
         // let h2 = document.createElement("h2")
 
@@ -55,9 +55,9 @@ function load_waifus(){
         // h2.innerHTML = `${waifu.nsfw === true ? "NSFW" : ""}`
 
         document.body.appendChild(card)
+        document.body.appendChild(h1)
         document.body.appendChild(img)
         // document.body.appendChild(bg)
-        document.body.appendChild(h1)
         // document.body.appendChild(layer)
         // document.body.appendChild(h2)
 
