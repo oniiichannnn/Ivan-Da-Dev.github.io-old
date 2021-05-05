@@ -374,7 +374,7 @@ document.addEventListener("click", function(element){
 })
 
 function display_anime(anime){
-    document.getElementsByClassName("nav_bar").style.display = 'none'
+    document.getElementsByClassName("nav_bar")[0].style.display = 'none'
     let getPage = document.getElementById("view")
     document.getElementById("view_title").innerHTML = toPropercase(anime.title)
     document.getElementById("view_review").innerHTML = anime.review
