@@ -11,16 +11,16 @@ body {
 }
 
 .head img#head_bg {
-    margin-top: 10%;
-    max-width: 700px;
-    max-height: 700px;
-    width: 70%;
-    height: 70%;
+    margin-top: 5%;
+    width: 100%;
+    height: 40rem;
 
     border-radius: 10px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    object-fit: cover;
+    object-position: 0 -10%;
 }
 
 .head h1#head_title{
@@ -147,7 +147,47 @@ body {
     border-radius: 5px;
 }
 
-.body  .card{
+.card {
+  color: white;
+  padding: 100px;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  border-radius: 5px;
+}
+
+.card:before {
+  content: "";
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  /* top: 89%; */
+  /* left: 0.25%; */
+  /* width: 99.5%; */
+  height: 100%;
+  width: 100%;
+  right: 0;
+  border-radius: 5px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background-size: 200% 200%;
+  transition: background-position 0.5s linear;
+}
+
+.card:hover:before {
+  background-position: 100% 50%;
+}
+
+/* .body  .card{
     background:linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 100%),url("./images/bg.jpg");
     background-repeat: no-repeat;
     background-position: right;
@@ -163,14 +203,15 @@ body {
     flex-direction: row-reverse;
 
     transition: background 0.5s linear;
-}
+}  */
 
-.body .card:hover {
-    background:linear-gradient(90deg, rgba(0,0,0,0.17690826330532217) 0%, rgba(0,212,255,0) 100%),url("./images/bg.jpg");
-    background-position: right;
+.body .card:hover .card_img,
+.body .card .card_img:hover {
+    box-shadow: 0px 0px 40px black;
 }
 
 .body  .card .card_img{
+    opacity: 1;
     max-width: 80%;
     max-height: 95%;
     border-radius: 5px;
@@ -178,19 +219,25 @@ body {
     /* left: -10px; */
     /* top: -10px; */
     transition: 0.5s;
-    opacity: 1;
     display: flex;
     justify-content: flex-start;
     align-self: center;
+    z-index: 4;
 }
 
-.body  .card .card_name{
+.body .card:hover .card_name,
+.body  .card .card_name:hover {
+    text-shadow: 0px 0px 20px black;
+}
+
+.body  .card .card_name {
+    opacity: 1;
     margin-right: 2%;
     margin-top: auto;
     margin-bottom: auto;
     font-size: 2.5rem;
-    text-shadow: 0px 0px 18px black;
-    opacity: 1;
+    z-index: 4;
+    transition: 0.5s;
 }
 
 
@@ -414,7 +461,9 @@ noscript a {
         margin-left: auto;
         margin-right: auto;
         display: block;
+        padding: 0px;
         transition: 0.5s;
+        margin-bottom: 10px;
     }
     
     .body  .card .card_img{
@@ -434,10 +483,15 @@ noscript a {
         text-shadow: 0px 0px 18px black;
         opacity: 1;
     }
+
+    .card:before {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 1030px) and (min-width: 801px) {
     .body  .card{
+        background-image: none;
         background: none;
         width: 90%;
         background-repeat: no-repeat;
@@ -451,6 +505,12 @@ noscript a {
         transition: 0.5s;
         justify-content: space-between;
         flex-direction: row-reverse;
+        padding: 0;
+        background: linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0) 100%
+          );
     }
     
     .body  .card .card_name{

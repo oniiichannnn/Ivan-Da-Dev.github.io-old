@@ -61,6 +61,9 @@ function load_waifus(){
         // document.body.appendChild(layer)
         // document.body.appendChild(h2)
 
+        // background: url("https://oniichann.tk/waifus/images/bg.jpg");
+        card.style.backgroundImage = `url(./images/${waifu.bg})`
+
         card.classList.add("card")
         card.id = waifu.name.replace(/ /g,'_')
         card.appendChild(h1)
@@ -75,6 +78,7 @@ function load_waifus(){
         // layer.classList.add("card_bg_layer")
         // h2.classList.add("card_nsfw")
 
+        
         document.getElementsByClassName("body")[0]
         .appendChild(card)
     })
@@ -132,3 +136,21 @@ function back(){
     getPage.style.display = 'none'
     // document.body.style.backgroundImage = `none`
 }
+
+window.addEventListener("resize", function(){
+    if(window.innerWidth < 1031){
+        if(document.getElementById("Yuuki_Mikan").style.backgroundImage === 'none') return
+        waifu_lists.forEach(waifu => {
+            document.getElementById(waifu.name.replace(/ /g,'_')).style.backgroundImage = 'none'
+            console.log('yes')
+        })
+    } else {
+        if(document.getElementById("Yuuki_Mikan").style.backgroundImage !== 'none') return
+        waifu_lists.forEach(waifu => {
+        let id = waifu.name.replace(/ /g,'_')
+        document.getElementById(id).style.backgroundImage = `url(./images/${waifu.bg})`
+        console.log(document.getElementById(id).style.backgroundImage)
+        console.log('yesss')
+        })
+    }
+})
