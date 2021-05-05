@@ -154,3 +154,12 @@ window.addEventListener("resize", function(){
         })
     }
 })
+
+function back(){
+    window.location.replace(`https://oniichann.tk/`)
+}
+
+function proceed(){
+    document.getElementById("nsfw_layer").style.display = 'none'
+    document.body.style.overflow = 'visible'
+}

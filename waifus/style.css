@@ -4,6 +4,7 @@ body {
     background-attachment: fixed;
     max-width: 100%;
     max-height: 100%;
+    overflow: hidden;
 }
 
 *{
@@ -387,6 +388,60 @@ noscript a {
 
 .nav_bar a#current{
     color: wheat;
+}
+
+#nsfw_layer {
+    position: absolute;
+    background-color: black;
+    opacity: 0.99;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1000;
+    top: 0px;
+    right: 0px;
+}
+
+#nsfw_layer h1 {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-top: 20%;
+}
+
+#nsfw_layer button {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+
+    transition: 0.5s;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    border: #95acff;
+    border-width: 2px;
+}
+
+#proceed {
+    background-color: black;
+}
+
+#go_back {
+    background-color: rgb(241, 63, 63);
+}
+
+#proceed:hover {
+    background-color: #95acff;
+}
+
+#go_back:hover {
+    background-color: rgb(247, 41, 41);
 }
 
 @media only screen and (max-width: 800px) {
