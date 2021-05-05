@@ -82,6 +82,19 @@ function load_waifus(){
         document.getElementsByClassName("body")[0]
         .appendChild(card)
     })
+
+    if(window.innerWidth < 1031){
+        if(document.getElementById("Yuuki_Mikan").style.backgroundImage === 'none') return
+        waifu_lists.forEach(waifu => {
+            document.getElementById(waifu.name.replace(/ /g,'_')).style.backgroundImage = 'none'
+        })
+    } else {
+        if(document.getElementById("Yuuki_Mikan").style.backgroundImage !== 'none') return
+        waifu_lists.forEach(waifu => {
+        let id = waifu.name.replace(/ /g,'_')
+        document.getElementById(id).style.backgroundImage = `url(./images/${waifu.bg})`
+        })
+    }
 }
 
 document.addEventListener("click", function(element){
@@ -155,7 +168,7 @@ window.addEventListener("resize", function(){
     }
 })
 
-function back(){
+function go_back(){
     window.location.replace(`https://oniichann.tk/`)
 }
 
