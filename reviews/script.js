@@ -94,7 +94,8 @@ const anime_lists = [
         review: "Before you ask why tf would u give this a 9, look at this @./msmw_nudity.jpg@ IS THAT NOT THE MOST CUTEST CREATURE YOU HAVE EVER SEEN???\n\nA lot of people might give it a 7 or 6 because of its animation @./msmw_animation.jpg@ but thats another aspect of why its funny lmaoooooo HER EYES ARE SPLITTING LMAOOO\n\nThe plot itself isn't that bad, the MC becomes a famous author because his sister doesn't want her parents to find out that shes a writer\n\nDid I watch the anime just because of how cute the sister is? yes, do I watch any anime that has cute girls in it? yes",
         genres: ["incest","nudity","comedy","bad animation"],
         img: "msmw_img.jpg",
-        bg: "msmw_bg.jpg"
+        bg: "msmw_bg.jpg",
+        nsfw: true
     },
     {
         title: "eromanga sensei",
@@ -320,6 +321,7 @@ function load_animes(){
             document.getElementsByClassName('comments')[0].style.display = 'inherit'
             document.getElementsByClassName('search_bar')[0].style.display = 'inherit'
             document.body.style.overflow = 'visible'
+        document.getElementsByClassName("nav_bar").style.display = 'inherit'
         }
 
         let card = document.createElement("div")
@@ -372,6 +374,7 @@ document.addEventListener("click", function(element){
 })
 
 function display_anime(anime){
+    document.getElementsByClassName("nav_bar").style.display = 'none'
     let getPage = document.getElementById("view")
     document.getElementById("view_title").innerHTML = toPropercase(anime.title)
     document.getElementById("view_review").innerHTML = anime.review

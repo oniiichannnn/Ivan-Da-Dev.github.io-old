@@ -4,13 +4,14 @@ body {
     background-attachment: fixed;
     background-position: center;
     overflow: hidden;
+    background-size: cover;
 }
 
 *{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.head, .body, #view, .comments, .display_results, #clear_btn, .search_bar {
+.head, .body, #view, .comments, .display_results, #clear_btn, .search_bar, .nav_bar {
     display: none;
 }
 
@@ -493,6 +494,7 @@ noscript a {
     font-size: 1.5rem;
     margin-right: 20%;
     margin-left: 20%;
+    margin-top: 20%;
 }
 
 #view #nsfw_layer button {
@@ -504,14 +506,16 @@ noscript a {
     margin-top: 10px;
     color: white;
 
-    transition: 1.5s;
+    transition: 0.5s;
     font-size: 1.5rem;
     border: none;
     outline: none;
+    border: #95acff;
+    border-width: 2px;
 }
 
 #proceed {
-    background-color: #23d160;
+    background-color: black;
 }
 
 #go_back {
@@ -519,11 +523,11 @@ noscript a {
 }
 
 #proceed:hover {
-    border-radius: 0px;
+    background-color: #95acff;
 }
 
 #go_back:hover {
-    border-radius: 0px;
+    background-color: rgb(247, 41, 41);
 }
 
 .nav_bar {
