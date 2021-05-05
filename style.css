@@ -53,9 +53,10 @@ body {
 
 .buttons a:hover {
     cursor: pointer;
-    border: gold;
+    border:#4365e0;
     border-width: 2px;
     border-style: solid;
+    background-color:#7289da;
 }
 
 .buttons a {
@@ -65,11 +66,12 @@ body {
     color: white;
     border-radius: 5px;
 
-    border: goldenrod;
+    border:#7289da;
     border-width: 2px;
     border-style: solid;
 
     text-align: center;
+    transition: 0.5s
 }
 
 #subtitle{
