@@ -1,13 +1,65 @@
+history.scrollRestoration = 'manual';
+
 const waifu_lists = [
     {
         name: "Yuuki Mikan",
         anime: "To Love Ru",
         img: "yuuki_mikan.jpg",
-        rating: 10,
-        bday: 'November 3rd',
-        nsfw: true,
-        age: 13,
         bg: "yuuki_mikan_bg.jpg"
+    },
+    {
+        name: "Satori Tamaba",
+        anime: "Busou Shoujo Machiavellianism",
+        img: "satori_img.gif",
+        bg: "satori_bg.jpg"
+    },
+    {
+        name: "Kei Shirogane",
+        anime: "love is war",
+        img: "kei_img.jpg",
+        bg: "kei_bg.jpg"
+    },
+    {
+        name: "Kanzaki H. Aria",
+        anime: "hidan no aria",
+        img: "aria_img.jpeg",
+        bg: "aria_bg.jpg"
+    },
+    {
+        name: "Kai Nayuta",
+        anime: "a sister's all you need",
+        img: "kani_img.jpg",
+        bg: "kani_bg.png"
+    },
+    {
+        name: "kurumi tokisaki",
+        anime: "date a live",
+        img: "kurumi_img.jpg",
+        bg: "kurumi_bg.jpg"
+    },
+    {
+        name: "sagiri izumi",
+        anime: "eromanga sensei",
+        img: "sagiri_img.jpg",
+        bg: "sagiri_bg.jpg"
+    },
+    {
+        name: "Satanichia Kurumizawa McDowell",
+        anime: "gabriel dropout",
+        img: "satania_img.png",
+        bg: "satania_bg.png"
+    },
+    {
+        name: "Raphiel Ainsworth Shiraha",
+        anime: "gabriel dropout",
+        img: "raphi_img.png",
+        bg: "raphi_bg.png"
+    },
+    {
+        name: "Gabriel White Tenma",
+        anime: "gabriel dropout",
+        img: "gab_img.png",
+        bg: "gab_bg.png"
     }
 ]
 
@@ -40,7 +92,7 @@ const emojis = [
 
 const linkReg = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/g
 
-function load_waifus(){
+function load_waifus(){    
     waifu_lists.sort().forEach(waifu => {
         let card = document.createElement("div")
         let h1 = document.createElement("h1")
@@ -88,53 +140,59 @@ function load_waifus(){
         waifu_lists.forEach(waifu => {
             document.getElementById(waifu.name.replace(/ /g,'_')).style.backgroundImage = 'none'
         })
+
+        window.scrollTo(0,0)
     } else {
         if(document.getElementById("Yuuki_Mikan").style.backgroundImage !== 'none') return
         waifu_lists.forEach(waifu => {
         let id = waifu.name.replace(/ /g,'_')
         document.getElementById(id).style.backgroundImage = `url(./images/${waifu.bg})`
         })
+
+        window.scrollTo(0,0)
     }
 }
 
-document.addEventListener("click", function(element){
-    if(element.path[1].id === 'view_animes'){
-        window.location.replace(`https://oniichann.tk/reviews?anime=${element.path[1].innerHTML.split('<strong id="anime_name">')[1].split('</strong>')[0].trim().toLowerCase()}`)
-    }
+// document.addEventListener("click", function(element){
+//     if(element.path[1].id === 'view_animes'){
+//         window.location.replace(`https://oniichann.tk/reviews?anime=${element.path[1].innerHTML.split('<strong id="anime_name">')[1].split('</strong>')[0].trim().toLowerCase()}`)
+//     }
 
-    if(element.path[1].id === 'view') return
-    if(!element.path[1].id) return
-    let waifu = waifu_lists.find(a => a.name === element.path[1].id.replace(/\_/g,' '))
-    if(!waifu) return
+//     if(element.path[1].id === 'view') return
+//     if(!element.path[1].id && !element.path[0].id) return
+//     let name = element.path[1].id.replace(/\_/g,' ') || element.path[0].id.replace(/\_/g,' ')
+//     let waifu = waifu_lists.find(a => a.name === name)
+//     if(!waifu) return
 
-    let getPage = document.getElementById("view")
-    document.getElementById("view_name").innerHTML = toPropercase(waifu.name)
+//     let getPage = document.getElementById("view")
+//     document.getElementById("view_name").innerHTML = toPropercase(waifu.name)
 
-    document.getElementById("view_animes").innerHTML = `Anime: <strong id='anime_name'>${toPropercase(waifu.anime)}</strong>`
-    document.getElementById("view_age").innerHTML = `Age: <strong id='age'>${waifu.age}</strong>`
+//     document.getElementById("view_animes").innerHTML = `Anime: <strong id='anime_name'>${toPropercase(waifu.anime)}</strong>`
+//     document.getElementById("view_age").innerHTML = `Age: <strong id='age'>${waifu.age}</strong>`
 
-    document.getElementById("view_img").src = `./images/${waifu.img}`
-    document.getElementById("view_birthday").innerHTML = `Birthday: <strong id='birthday'>${waifu.bday}</strong>`
+//     document.getElementById("view_img").src = `./images/${waifu.img}`
+//     document.getElementById("view_birthday").innerHTML = `Birthday: <strong id='birthday'>${waifu.bday}</strong>`
 
-    getPage.style.display = 'inherit'
-    document.getElementsByClassName('body')[0].style.display = 'none'
-    document.getElementsByClassName('head')[0].style.display = 'none'
-    // document.body.style.backgroundImage = `url(${waifu.bg})`
-    document.getElementById('comments_script').text =
-    `
-     var disqus_config = function () {
-     this.page.url = "https://oniichann.tk/waifus";  // Replace PAGE_URL with your page's canonical URL variable
-     this.page.identifier = ${waifu.name.replace(/ /g,'_')}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-     };
-
-     (function() { // DON'T EDIT BELOW THIS LINE
-     var d = document, s = d.createElement('script');
-     s.src = 'https://oniichann-tk.disqus.com/embed.js';
-     s.setAttribute('data-timestamp', +new Date());
-     (d.head || d.body).appendChild(s);
-     })();
-    `
-})
+//     getPage.style.display = 'inherit'
+//     document.getElementsByClassName('body')[0].style.display = 'none'
+//     document.getElementsByClassName('head')[0].style.display = 'none'
+//     // document.body.style.backgroundImage = `url(${waifu.bg})`
+//     document.getElementById('comments_script').text =
+//     `
+//      var disqus_config = function () {
+//      this.page.url = "https://oniichann.tk/waifus";  // Replace PAGE_URL with your page's canonical URL variable
+//      this.page.identifier = ${waifu.name.replace(/ /g,'_')}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+//      };
+//      (function() { // DON'T EDIT BELOW THIS LINE
+//      var d = document, s = d.createElement('script');
+//      s.src = 'https://oniichann-tk.disqus.com/embed.js';
+//      s.setAttribute('data-timestamp', +new Date());
+//      (d.head || d.body).appendChild(s);
+//      })();
+//     `
+//     document.getElementsByClassName("nav_bar")[0].style.display = 'none'
+//     window.scrollTo(0,0)
+// })
 
 function toPropercase(string){
     return string.replace(/(\b\w)/gi, w => w.toUpperCase())
@@ -147,6 +205,7 @@ function back(){
 
     let getPage = document.getElementById("view")
     getPage.style.display = 'none'
+    document.getElementsByClassName("nav_bar")[0].style.display = 'inherit'
     // document.body.style.backgroundImage = `none`
 }
 
@@ -154,16 +213,14 @@ window.addEventListener("resize", function(){
     if(window.innerWidth < 1031){
         if(document.getElementById("Yuuki_Mikan").style.backgroundImage === 'none') return
         waifu_lists.forEach(waifu => {
-            document.getElementById(waifu.name.replace(/ /g,'_')).style.backgroundImage = 'none'
-            console.log('yes')
+            let id = waifu.name.replace(/ /g,'_')
+            document.getElementById(id).style.backgroundImage = `none`
         })
     } else {
         if(document.getElementById("Yuuki_Mikan").style.backgroundImage !== 'none') return
         waifu_lists.forEach(waifu => {
         let id = waifu.name.replace(/ /g,'_')
         document.getElementById(id).style.backgroundImage = `url(./images/${waifu.bg})`
-        console.log(document.getElementById(id).style.backgroundImage)
-        console.log('yesss')
         })
     }
 })
