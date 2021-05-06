@@ -1,3 +1,5 @@
+history.scrollRestoration = 'manual';
+
 const anime_lists = [
     {
         title: "a certain magical index",
@@ -448,7 +450,6 @@ function display_anime(anime){
         document.getElementById("nsfw_layer").style.display = 'none'
         document.body.style.overflow = 'visible'
     } else {
-        // history.scrollRestoration = 'manual';
         window.scrollTo(0,0)
     }
 
