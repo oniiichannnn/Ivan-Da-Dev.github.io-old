@@ -447,6 +447,9 @@ function display_anime(anime){
     if(!anime.nsfw){
         document.getElementById("nsfw_layer").style.display = 'none'
         document.body.style.overflow = 'visible'
+    } else {
+        // history.scrollRestoration = 'manual';
+        window.scrollTo(0,0)
     }
 
     function encodeURL(url){
