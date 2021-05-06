@@ -324,6 +324,8 @@ function load_animes(){
             document.getElementsByClassName('search_bar')[0].style.display = 'inherit'
             document.body.style.overflow = 'visible'
             document.getElementsByClassName("nav_bar")[0].style.display = 'inherit'
+            document.getElementById("meta_desc").content = `A website where I post shitty reviews on animes`
+            document.getElementById("meta_img").content = `./images/icon.png`
         }
 
         let card = document.createElement("div")
@@ -453,6 +455,8 @@ function display_anime(anime){
         window.scrollTo(0,0)
     }
 
+    document.getElementById("meta_desc").content = `Read Onii-Chan's shitty review on ${anime.title} with a rating of ${anime.rating}`
+    document.getElementById("meta_img").content = `./images/${anime.img}`
     function encodeURL(url){
         return encodeURI(url)
     }
