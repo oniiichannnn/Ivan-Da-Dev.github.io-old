@@ -1,5 +1,6 @@
 body {
-    background-color: #28282B;
+    /* background-color: #28282B; */
+    background-color: rgb(238, 235, 235);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -16,16 +17,17 @@ body {
 }
 
 .head img#head_bg {
-    margin-top: 10%;
+    margin-top: 5rem;
     max-width: 700px;
     max-height: 700px;
-    width: 70%;
-    height: 70%;
+    width: 100%;
+    height: 90%;
 
     border-radius: 10px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 0px 0px 2px black;
 }
 
 .head h1#head_title{
@@ -35,13 +37,30 @@ body {
 }
 
 .head h1#desc, .head h1#comments_btn{
-    background-color: #18181a;
+    background-color: rgb(207, 202, 202);
     color: white;
     text-align: center;
     font-size: 2.5rem;
     border-radius: 5px;
     margin-left: 2rem;
     margin-right: 2rem;
+}
+
+#cmnts_link {
+    color: white;
+    border-radius: 5px;
+    font-size: 3rem;
+
+    box-shadow: 0px 0px 0px none;
+    border: solid;
+    border-width: 2px;
+    border-color:#bcbedc;
+
+    transition: 0.5s;
+}
+
+#cmnts_link:hover{
+    background-color:#bcbedc;
 }
 
 #view{
@@ -102,7 +121,8 @@ body {
 }
 
 #view #view_review{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    font-family: Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
     color: white;
     text-shadow: 0px 5px 18px black;
     font-size: 2rem;
@@ -146,52 +166,110 @@ body {
 }
 
 .body .anime_list{
-    background-color: #18181a;
-    color: white;
+    background-color: rgb(209, 208, 208);
+    color: #bcbedc;
     font-size: 2.5rem;
     /* margin-left: 0%; */
     border-radius: 5px;
 
     margin-left: auto;
     margin-right: auto;
-    display: block;
+    /* display: block; */
 }
 
-.body .anime_list .card:hover{
-    background-color:rgba(124, 119, 119, 0.65);
+.body .anime_list .card:hover:before{
+    /* background-color:#afb2dd; */
+    /* color: rgb(209, 208, 208); */
+    background-position: 100% 50%;
 }
 
 .body .anime_list .card{
-    height: 50%;
-    width: 15%;
-    min-height: 500px;
-    min-width: 250px;
-    display: inline-block;
+    height: 20%;
+    width: 90%;
+    /* min-height: 500px; */
+    /* min-width: 250px; */
+    /* display: inline-block; */
     border-radius: 10px;
     margin: 10px;
     transition: 0.5s;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-repeat: no-repeat;
 }
 
-.body .anime_list .card .card_img{
-    width: 100%;
+/* .body .anime_list .card:before {
+    content: "";
+    z-index: 2;
+    position: absolute;
     height: 100%;
-    border-radius: 5px;
+    width: 100%;
+    right: 0;
+    border-radius: 0px 5px 5px 0px; /* top left | top right | bot right | bot left 
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 71%, rgba(0,0,0,0) 100%);
+    background-size: 200% 200%;
+    transition: background-position 0.5s linear;
+} */
+
+.body .anime_list .card .card_img{
+    width: 20%;
+    height: 100%;
+    border-radius: 0px 5px 5px 0px ;
+    float: left;
+    z-index: 4;
+    position: relative;
+    margin-left: 7%;
 }
 
 .body .anime_list .card .card_title{
     font-size: 2rem;
-    text-align: center;
+    color: rgb(216, 213, 213);
+    float: right;
+    z-index: 4;
+    position: relative;
+    margin-right: 3%;
 }
 
 .body .anime_list .card .card_ratings{
-    font-size: 1rem;
+    font-size: 0rem;
     text-align: center;
     font-family: 'open sans',arial,sans-serif;
+    color: #bcbedc;
+    z-index: 4;
+    background-color: #2b2d42;
+    height: 100%;
+    position: absolute;
+    width: 7%;
+    top: 0px;
+    bottom: auto;
+    border-radius: 5px 0 0 5px;
+}
+
+.body .anime_list .card .card_desc {
+    color: white;
+    z-index: 4;
+    position: absolute;
+    bottom: 0px;
+    font-size: 1rem;
+    left: 28%;
+    width: 72%;
+    text-shadow: 0px 0px 2px black;
 }
 
 #card_rating_bigger{
-    font-size: 5rem;
+    font-size: 4.1rem;
     font-weight: bold;
+    color: #bcbedc;
+}
+
+#star{
+    max-height: 40%;
+    max-width: 40%;
 }
 
 #genre{
@@ -281,24 +359,6 @@ body {
     background: #8da5fc;
 }
 
-#cmnts_link {
-    color: white;
-    border-radius: 5px;
-    font-size: 3rem;
-
-    box-shadow: 0px 0px 0px none;
-    background-color:#1c1e20;
-    border: solid;
-    border-width: 2px;
-    border-color:#7289da;
-
-    transition: 0.5s;
-}
-
-#cmnts_link:hover{
-    background-color:#3b4046;
-}
-
 noscript img {
     margin-right: auto;
     margin-left: auto;
@@ -328,7 +388,7 @@ noscript a {
 .search input#search_input{
     width: 98%;
     height: 3rem;
-    background-color:#1c1e20;
+    background-color: rgb(190, 189, 189);
     border: solid;
     border-width: 2px;
     border-color:#7289da;
@@ -346,7 +406,7 @@ noscript a {
 }
 
 .search input#submit{
-    background-color:#1c1e20;
+    background-color: rgb(209, 208, 208);
     border: solid;
     border-width: 2px;
     border-color:#7289da;
@@ -366,16 +426,17 @@ noscript a {
 .search label{
     color: white;
     font-size: 1.5rem;
-    /* text-align: center;
-    margin-right: auto;
-    margin-left: auto; */
+    font-weight: 600px;
+    font-family: Overpass,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
     display: block;
     font-weight: bolder;
     margin-left: 0.68%;
 }
 
 .search_bar {
-    background-color: #18181a;
+    background-color: rgb(209, 208, 208);
 }
 
 .search_btns {
@@ -392,7 +453,7 @@ noscript a {
 }
 
 #clear_btn {
-    background-color:#1c1e20;
+    background-color: rgb(209, 208, 208);
     border: solid;
     border-width: 2px;
     border-color:#7289da;
@@ -403,7 +464,7 @@ noscript a {
     margin-left: 0.68%;
 }
 
-.body .anime_list{
+/* .body .anime_list{
     background-color: #18181a;
     color: white;
     font-size: 2.5rem;
@@ -412,7 +473,7 @@ noscript a {
     margin-left: auto;
     margin-right: auto;
     display: block;
-}
+} */
 
 .display_results .card:hover{
     background-color:rgba(124, 119, 119, 0.65);
@@ -464,17 +525,18 @@ noscript a {
     padding: 10px;
     cursor: pointer;
 
-    background-color:#1c1e20;
+    background-color:rgb(190, 189, 189);
     border: solid;
     border-width: 2px;
     border-color:#7289da;
     color: white;
     border-radius: 5px;
     margin-top: 6px;
+    transition: 0.2s;
 }
 
 .autocomplete-active {
-    background-color: #95acff !important;
+    background-color: #b6b9ec !important;
     color: #ffffff;
 }
 
@@ -544,26 +606,27 @@ noscript a {
     width: 100%;
     right: 0px;
     top: 0px;
-    background-color: black;
+    background-color: #2b2d42;
 
     box-shadow: 0px -5px 18px black;
 }
 
 .nav_bar a {
-    background-color: black;
-    border: #95acff;
-    border-width: 2px;
+    background-color: none;
+    border: none;
 
     display: inline;
     font-size: 2rem;
-    color: white;
+    color: #bcbedc;
     float: right;
     margin: 10px;
 
     text-decoration: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Overpass,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
 
     transition: 0.5s;
+    font-weight: 600;
+    text-transform: capitalize;
 }
 
 .nav_bar a:hover{
@@ -574,16 +637,134 @@ noscript a {
     color: wheat;
 }
 
-@media only screen and (max-width: 800px) {
-    .body .anime_list{
-        margin-left: 5%;
-        margin-right: 5%;
+@media only screen and (max-width: 1200px){
+    .body .anime_list .card{
+        background: linear-gradient(106deg, rgba(43,45,66,1) 0%, rgba(43,45,66,1) 24%, rgba(110,115,163,1) 100%);
+        /* background: rgb(43,45,66); */
+    }
+}
+
+@media only screen and (max-width: 1184px) and (min-width: 800px){
+    .body .anime_list .card .card_img{
+        margin-left: 9%;
+        /* height: 30%; */
+        /* width: 25%; */
+    }
+    
+    .body .anime_list .card .card_ratings{
+        width: 9%;
     }
 
-    .display_results .card{
+    #card_rating_bigger{
+        font-size: 3rem;
+    }
+
+    .body .anime_list .card .card_title{
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 1300px) and (min-width: 1184px){
+    .body .anime_list .card .card_img{
+        margin-left: 7%;
+        height: 30%;
+        width: 25%;
+    }
+    
+    .body .anime_list .card .card_ratings{
+        width: 7%;
+    }
+
+    #card_rating_bigger{
+        font-size: 4rem;
+    }
+
+    .body .anime_list .card{
+        height: 20%;
+        width: 100%;
+    }
+
+    .body .anime_list .card .card_title{
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 1640px) and (min-width: 1300px){
+    .body .anime_list .card .card_img{
+        margin-left: 10%;
+    }
+    
+    .body .anime_list .card .card_ratings{
+        width: 10%;
+    }
+
+    .body .anime_list .card{
+        height: 20%;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    #star {
+        max-width: 10%;
+        max-height: 10%;
+    }
+
+    .body .anime_list .card .card_img{
+        width: 80%;
+        height: 60%;
+        border-radius: 5px 5px 5px 5px ;
+        z-index: 4;
         margin-left: auto;
         margin-right: auto;
         display: block;
+        float: none;
+    }
+    
+    .body .anime_list .card .card_title{
+        font-size: 2rem;
+        color: rgb(216, 213, 213);
+        z-index: 4;
+        float: none;
+        text-align: center;
+    }
+
+    .body .anime_list .card .card_ratings{
+        font-size: 1rem;
+        text-align: center;
+        font-family: 'open sans',arial,sans-serif;
+        /* color: #bcbedc; */
+        color: black;
+        display: block;
+        z-index: 4;
+        background-color: transparent;
+        height: auto;
+        position: relative;
+        width: auto;
+        top: 0;
+        bottom: 0;
+        border-radius: 0;
+        float: none;
+    }
+
+
+    .body .anime_list{
+        margin-left: 5%;
+        margin-right: 5%;
+        display: block;
+    }
+
+    .body .anime_list .card {
+        display: block;
+    }
+
+    .body .anime_list .card:hover:before{
+        background-position: 0;
+    }
+    
+    .body .anime_list .card:before {
+        display: none;
     }
 
     h1#iden{
@@ -616,9 +797,5 @@ noscript a {
 
     #view #view_review{
         font-size: 1.5rem;
-    }
-
-    .head img#head_bg {
-        margin-top: 20%;
     }
 }

@@ -15,7 +15,8 @@ const anime_lists = [
         review: "This was the first anime that I watched. Half of it was good. 'U sick bastard how can u not enjoy darling in the franxx', well I prefer the 02 that loves to tease the MC but when they maked up at episode 6 or 7 or 8, 02 completely changed from a teaser to a normal girl, I rated it 10 because the plot is very good lmao. I didn't expect 02 and the MC to be giant spaceships and die together in the end. I ALSO DIDN'T EXPECT THOSE 2 KIDS TO HAVE SEX AND HAVE A BABY HOLY FUC- Oh I lost my composure there. I love it how they use the power system, whats a \"power system\" u ask? For example, 02 has the authority to go wherever she wants and do what she wants. They know what 02 is doing but they can't stop her because shes plays a important role too, I like how 02 keeps saying darling, this anime also feels nostalgic when thinking back",
         genres: ["school","magic","romance","drama","action","ecchi","comedy","science","sci-fi"],
         img: "darling_img.jpg",
-        bg: "darling_bg.webp"
+        bg: "darling_bg.webp",
+        bg_pos: "50% 0%"
     },
     {
         title: "the pet girl of sakura hall",
@@ -51,7 +52,7 @@ const anime_lists = [
     },
     {
         title: "monogatari series",
-        rating: 11,
+        rating: 10,
         review: "I started with kizumonogatari, meaning I watched the most brutal scenes among the monogatari series. If you started with kizumonogatari and dropped it because of the brutality, well you can ignore my opinion but you should keep continuing. The monogatari series isn't as brutal as kizu makes it look like. Its really interesting the way they animate and plan the timeline. The monogatari series is the best mystery anime imo, because they don't air the anime according to its plot's timeline, they would randomly air a season and then air another season on a completely different timeline as you can tell from each season's release date. Not only that but what makes it godly to me is the way they animate it, have you ever wondered what a anime with 98% text look like? Well that would be the monogatari series, not only does Araragi talk all the time, but they even add text flash scenes which look like this: @./monogatari_flash_scene.png@ that always irritates me because I would have to go back and pause the video to look what it said (altho I usually ignore them). Well in case you read this and you want to watch the monogatari series according to the order I watched, [press me to watch the monogatari series on a pirated anime website](https://animedao.to/anime/kizumonogatari/)",
         genres: ["ecchi","comedy","adventure","mystery","psychological fiction"],
         img: "monogatari_img.jpg",
@@ -178,7 +179,8 @@ const anime_lists = [
         review: "The first season was good, it caught all my interest and I end up finishing it in less than 12 hours. But from that point, the anime went downhill for me, the first season gave the MC the target to win aiz's @./danmachi_aiz.png@ heart and be at the same leve as her, but as u can see from the thumbnails of the second and 3rd season, @./danmachi_s2.jpg@ @./danmachi_s3.jpg@ it looks like bell stuck his nose into some bad business which as u can guess, has nothing to do with being equally skilled with aiz nor winning aiz's heart. In fact, in s3, there was one time where bell actually **faught** Aiz in order to save the monsters\n\nMoreover, I was hoping Bell would end up with aiz or hestia at the end because of the romance genre tho sadly, he doesn't\n\nseason 4 is coming in 2022 so I'll update this when I watched it",
         genres: ["romance","comedy","action","0 to hero","ecchi"],
         img: "danmachi_img.jpg",
-        bg: "danmachi_bg.jpg"
+        bg: "danmachi_bg.jpg",
+        bg_pos: "0% 0%"
     },
     {
         title: "hello world",
@@ -186,7 +188,8 @@ const anime_lists = [
         review: "This was and will always be the best romance movie, not anime, I've ever watched. The story where the MC discovers that he is actually living in a data world (No one calls it that only I do lmao) inside a database is so good to start with. Then the older or future MC comes and steals his girl lmao <lenny> rip MC. The girl gets stolen but soon brought back to her own world, it is a bit sad that the future MC died. Tho the plot twist in the end tho, we all thought that the girl (Ruri) @./ruri.jpg@ died because a lightning struck her, and thats what I thought happened in the real world as well. But NOPE, it was the MC who died, well not died but was unconcious for the whole time and it was his wife (which is also Ruri btw) who kept trying to bring him back, if you didn't notice this, the animation style in the movie (for the most part) was 3d but when the MC wakes up in his real world, the animation was in 2d as u can see this is\n\n**The 3D scenes:** @./hello_world_3d.jpg@ **The Ending scene (2D)**: @./hello_world_2d.jpg@ and Kai Tanaka commented this on the comments section of Hello world in AnimeDao\n\nIf you’ll look closely, you’ll notice that all the events of the “past” and “present-past” timelines involve 3-D animation, whereas, the events of the final “present timeline” have 2-D animation. This creates a contrast between the simulated and actual events of the anime’s storyline. Also, **since the movie is all about complex programming and its manipulation, its title alludes to the “Hello World” program which is often used to represent the basic syntax of a programming language**\n\nThats also a unique aspect about their animations and holy fuck I JUST DISCOVERED THERES A SEQUEL CALLED ANOTHER WORLD, I will watch it and update this when I am done\n\n\nI have finished watching the sequel for it, and boy, not gonna lie I was dissapointed. I was hoping, since its a sequel, that they would make another movie or heck turn it into half season or full season anime but nope, all I saw was 3 OVAs showing how the MC spent his life after 10 years",
         genres: ["action","isekai","romance","science fiction"],
         img: "hello_world_img.jpg",
-        bg: "hello_world_bg.jpg"
+        bg: "hello_world_bg.jpg",
+        bg_pos: "60% 40%"
     },
     {
         title: "i want to eat your pancrease",
@@ -202,7 +205,8 @@ const anime_lists = [
         review: "This anime is good. Tho sadly, a lot of people don't know it's existence. The plot is there are bad battle ships, the MC's battleship is also one of them but she (yes the battle ship is a girl) rebelled against them and obeyed the MC regardless if it means sinking her own former allies. There is some character development for 1-401 @./ars_nova_img.jpg@ this is her, the battleship I mentioned earlier, she has a robot like attitude at first but at the end, when the MC almost freezed to death, she saved him despite the MC told him not to, that's very touching ya know\n\nReason why I gave it a 8 and not a 10? because the MC doesn't end up with 1-401",
         genres: ["science fiction","romance"],
         img: "ars_nova_img.jpg",
-        bg: "ars_nova_bg.png"
+        bg: "ars_nova_bg.png",
+        bg_pos: "50% 50%"
     },
     {
         title: "recently, my sister is unusual",
@@ -213,7 +217,7 @@ const anime_lists = [
         bg: "rmsiu_bg.jpg"
     },
     {
-        title: "hensuki: are you willing to fall in love with a pervert, as long as she's a cutie?",
+        title: "hensuki: are you willing to fall in love<br>with a pervert, as long as she's a cutie?",
         rating: 7,
         review: "Watched this anime when I was a normie and its pretty good. I like how they used a cinderella reference but with panties, and that the mc is looking for this \"cinderella\" but ignores all the cute girls he has surrounding him. I would've preferred him dating his sister in the end (btw his sister was the cinderella), don't worry, they are not blood related, but the MC still can't do it, what a pussy am I right?",
         genres: ["comedy","ecchi","school","harem","romance"],
@@ -262,7 +266,7 @@ const anime_lists = [
  https://oniichann.tk/reviews/?anime=
 */
 
-
+const sizeRemoveBG = 1200
 const emojis = [
     {
         name: 'hehe',
@@ -324,33 +328,56 @@ function load_animes(){
             document.getElementsByClassName('search_bar')[0].style.display = 'inherit'
             document.body.style.overflow = 'visible'
             document.getElementsByClassName("nav_bar")[0].style.display = 'inherit'
-            document.getElementById("meta_desc").content = `A website where I post shitty reviews on animes`
-            document.getElementById("meta_img").content = `./images/icon.png`
         }
 
         let card = document.createElement("div")
         let img = document.createElement("img")
         let h1 = document.createElement("h1")
         let h2 = document.createElement("h2")
+        let h3 = document.createElement("h3")
 
         img.src = `./images/${anime.img}`
         h1.innerHTML = anime.title.replace(/(\b\w)/gi, w => w.toUpperCase())
-        h2.innerHTML = `<strong id='card_rating_bigger'>${anime.rating}</strong> / 10`
+        h2.innerHTML = `<strong id='card_rating_bigger'>${anime.rating}</strong><br><img src='./images/star.png' id='star'>`
+
+        let desc = `
+        &nbsp;&nbsp;The story is set in Academy City (学園都市, Gakuen Toshi), a technologically advanced independent city-state located in the west of Tokyo known for its educational and research institutions. Tōma Kamijō is a student in Academy City whose right hand, the Imagine Breaker, has the ability to negate any supernatural power, but also negates his own luck, much to his chagrin. One day, Tōma meets a young English girl named Index – a nun from Necessarius, a secret magic branch of the Church of England, whose mind has been implanted with the Index Librorum Prohibitorum – 103,000 forbidden magical books that the Church has stored in secret locations. His encounter with her leads him to meet others from the secret worlds of science and magic. Tōma's unusual power places him at the center of conflicts between the Sorcerers and Espers in Academy City who try to unravel the secrets behind Academy City, Index, and Tōma's own special power.
+        Besides its own manga adaptation, the series also has two manga series which are side stories focusing on other main characters. One of them is A Certain Scientific Railgun, which focuses on Mikoto Misaka, an Electromaster and one of the most powerful Espers in the city. The second, A Certain Scientific Accelerator, focuses on Accelerator, a teenager who can control vectors, known as the most powerful Esper in Academy City.
+        Besides its own manga adaptation, the series also has two manga series which are side stories focusing on other main characters. One of them is A Certain Scientific Railgun, which focuses on Mikoto Misaka, an Electromaster and one of the most powerful Espers in the city. The second, A Certain Scientific Accelerator, focuses on Accelerator, a teenager who can control vectors, known as the most powerful Esper in Academy City.
+        Besides its own manga adaptation, the series also has two manga series which are side stories focusing on other main characters. One of them is A Certain Scientific Railgun, which focuses on Mikoto Misaka, an Electromaster and one of the most powerful Espers in the city. The second, A Certain Scientific Accelerator, focuses on Accelerator, a teenager who can control vectors, known as the most powerful Esper in Academy City.
+        Besides its own manga adaptation, the series also has two manga series which are side stories focusing on other main characters. One of them is A Certain Scientific Railgun, which focuses on Mikoto Misaka, an Electromaster and one of the most powerful Espers in the city. The second, A Certain Scientific Accelerator, focuses on Accelerator, a teenager who can control vectors, known as the most powerful Esper in Academy City.
+        `
+        .replace(/\n/g,"<br><br>")
+        .split("<br><br>")
+
+        let newDesc = []
+        for (const word of desc){
+            newDesc.push(`<br><br>&nbsp;&nbsp;${word}`)
+        }
+
+        h3.innerHTML = newDesc.join("")
 
         document.body.appendChild(card)
         document.body.appendChild(img)
         document.body.appendChild(h1)
         document.body.appendChild(h2)
+        document.body.appendChild(h3)
+
+        if(window.innerWidth > sizeRemoveBG) {card.style.backgroundImage = `linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 71%, rgba(0,0,0,0) 100%), url(./images/${anime.bg})`}
+
+        card.style.backgroundPosition = anime.bg_pos ? anime.bg_pos : '100% 0%'
 
         card.classList.add("card")
         card.id = anime.title.replace(/ /g,'_')
         card.appendChild(h1)
         card.appendChild(h2)
         card.appendChild(img)
+        card.appendChild(h3)
 
         img.classList.add("card_img")
         h1.classList.add("card_title")
         h2.classList.add("card_ratings")
+        h3.classList.add("card_desc")
 
         Array.from(document.getElementsByClassName("anime_list")).find(e => e.id === anime.title.substring(0,1).toUpperCase())
         .appendChild(card)
@@ -504,6 +531,7 @@ document.getElementById("form").addEventListener("submit", el => {
             img.src = `./images/${anime.img}`
             h1.innerHTML = anime.title.replace(/(\b\w)/gi, w => w.toUpperCase())
             h2.innerHTML = `<strong id='card_rating_bigger'>${anime.rating}</strong> / 10`
+            .replace("\n","<br>")
 
             document.body.appendChild(card)
             document.body.appendChild(img)
@@ -653,3 +681,19 @@ function autocomplete(inp, arr) {
 
   /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
   autocomplete(document.getElementById("search_input"), animes);
+
+window.addEventListener("resize", function(){
+    if(window.innerWidth < sizeRemoveBG){
+        if(document.getElementById("horimiya").style.backgroundImage === 'none') return
+        anime_lists.forEach(anime => {
+            let id = anime.title.replace(/ /g,'_')
+            document.getElementById(id).style.backgroundImage = `none`
+        })
+    } else {
+        if(document.getElementById("horimiya").style.backgroundImage !== 'none') return
+        anime_lists.forEach(anime => {
+        let id = anime.title.replace(/ /g,'_')
+        document.getElementById(id).style.backgroundImage = `url(./images/${anime.bg})`
+        })
+    }
+})
