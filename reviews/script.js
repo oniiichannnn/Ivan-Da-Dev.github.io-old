@@ -394,9 +394,10 @@ function load_animes(){
 }
 
 document.addEventListener("click", function(element){
-    if(element.path[1].id === 'view') return
+    if(element.path[1].id === 'view' || element.path[1].id === 'form') return
     if(!element.path[1].id) return
-    let anime = anime_lists.find(a => a.title === element.path[1].id.replace(/\_/g,' '))
+    if(element.path[1].id.startsWith("search_") ? element.path[1].id.replace(/\_/g,' ').slice('search '.length) : element.path[1].id.replace(/\_/g,' ').trim() === '') return
+    let anime = anime_lists.find(a => a.title === element.path[1].id.startsWith("search_") ? element.path[1].id.replace(/\_/g,' ').slice('search '.length) : element.path[1].id.replace(/\_/g,' '))
     if(!anime) return
     window.location.replace(encodeURI(`https://oniichann.tk/reviews/?anime=${anime.title.toLowerCase()}&scroll=${document.documentElement.scrollTop}`))
 })
@@ -455,6 +456,7 @@ function display_anime(anime){
     getPage.style.display = 'inherit'
     document.getElementsByClassName('body')[0].style.display = 'none'
     document.getElementsByClassName('head')[0].style.display = 'none'
+    document.getElementsByClassName('search')[0].style.display = 'none'
     document.body.style.backgroundImage = `url(./images/${anime.bg})`
 
     document.getElementById('comments_script').text =
@@ -501,7 +503,6 @@ function proceed(){
 }
 
 document.getElementById("form").addEventListener("submit", el => {
-    console.log('yes')
     el.preventDefault()
 
     let value = document.getElementById('search_input').value
@@ -510,8 +511,24 @@ document.getElementById("form").addEventListener("submit", el => {
     clearRes()
 
     let results = search(value)
-    document.getElementsByClassName('display_results')[0].style.display = 'inherit'
+    document.getElementsByClassName('display_results')[0].style.display = 
+    window.innerWidth < 546 ? "block" : window.innerWidth > 546 && window.innerWidth < 800 ? "flex" : "inherit"
 
+    let label = document.createElement("h1")
+
+    document.body.appendChild(label)
+    label.classList.add("search_res_label")
+    document.getElementsByClassName("display_results")[0].appendChild(label)
+
+    label.innerHTML = `Searched for <strong id='search_name'>${value}</strong>`
+
+    if(results.length === 1){
+        display_anime(results[0])
+        clearRes()
+    }
+
+    if(results.length === 1) return
+    
     if(results.length === 0){
         let h1 = document.createElement("h1")
         h1.innerHTML = "No results found"
@@ -536,7 +553,7 @@ document.getElementById("form").addEventListener("submit", el => {
             document.body.appendChild(h2)
 
             card.classList.add("card")
-            card.id = anime.title.replace(/ /g,'_')
+            card.id = `search_${anime.title.replace(/ /g,'_')}`
             card.appendChild(h1)
             card.appendChild(h2)
             card.appendChild(img)
@@ -583,8 +600,11 @@ function autocomplete(inp, arr) {
         this.parentNode.appendChild(a);
         /*for each item in the array...*/
         for (i = 0; i < arr.length; i++) {
+
           /*check if the item starts with the same letters as the text field value:*/
-          if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+        //   if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+            if (arr[i].toLowerCase().includes(val.toLowerCase())) {
+
             /*create a DIV element for each matching element:*/
             b = document.createElement("DIV");
             /*make the matching letters bold:*/
