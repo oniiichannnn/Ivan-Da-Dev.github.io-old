@@ -30,16 +30,24 @@
     </noscript>
 
     /*color: #bcbedc bg: rgb(238, 235, 235)*/
+    <div class="search_bar">
+        <form class="search" id="form">
+            <input type="text" id="search_input" name="search_label" autocomplete="off"><br>
+            <input type="submit" value="Search" class="search_btns" id="submit">
+        </form>
+        <button id="clear_btn" onclick="clearRes()" class="search_btns">Close</button>
+    </div>
+
     <div class="head">
         <img src="./images/home_bg.jpg" id="head_bg" onclick="window.location.replace('./index.html')">
 
-        <h1 id="desc">
+        <!-- <h1 id="desc">
             This is a website where I post my shitty reviews about anime that I have watched. There will be spoilers in the reviews
         </h1>
 
         <h1 id="comments_btn">
             Want to recomment me some of your shitty animes?<br><br><strong id="cmnts_link" onclick="window.scrollTo(0,document.getElementsByClassName('comments')[0].offsetTop)">Press me</strong>
-        </h1>
+        </h1> -->
     </div>
 
     <div id="view">
@@ -59,16 +67,6 @@
             <button id="back" onclick="back()">Back To List</button>
             <img id="view_img">
         </div>
-    </div>
-
-    <div class="search_bar">
-        <form class="search" id="form">
-            <label for="search_label">Search for a anime review</label><br>
-            <input type="text" id="search_input" name="search_label" autocomplete="off"><br>
-
-            <input type="submit" value="Search" class="search_btns" id="submit">
-        </form>
-        <button id="clear_btn" onclick="clearRes()" class="search_btns">Close</button>
     </div>
 
     <div class="display_results"></div>

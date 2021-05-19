@@ -267,6 +267,7 @@ const anime_lists = [
 */
 
 const sizeRemoveBG = 1200
+const defaultColor = '#0f3460'
 const emojis = [
     {
         name: 'hehe',
@@ -341,11 +342,7 @@ function load_animes(){
         h2.innerHTML = `<strong id='card_rating_bigger'>${anime.rating}</strong><br><img src='./images/star.png' id='star'>`
 
         let desc = `
-        &nbsp;&nbsp;The story is set in Academy City (学園都市, Gakuen Toshi), a technologically advanced independent city-state located in the west of Tokyo known for its educational and research institutions. Tōma Kamijō is a student in Academy City whose right hand, the Imagine Breaker, has the ability to negate any supernatural power, but also negates his own luck, much to his chagrin. One day, Tōma meets a young English girl named Index – a nun from Necessarius, a secret magic branch of the Church of England, whose mind has been implanted with the Index Librorum Prohibitorum – 103,000 forbidden magical books that the Church has stored in secret locations. His encounter with her leads him to meet others from the secret worlds of science and magic. Tōma's unusual power places him at the center of conflicts between the Sorcerers and Espers in Academy City who try to unravel the secrets behind Academy City, Index, and Tōma's own special power.
-        Besides its own manga adaptation, the series also has two manga series which are side stories focusing on other main characters. One of them is A Certain Scientific Railgun, which focuses on Mikoto Misaka, an Electromaster and one of the most powerful Espers in the city. The second, A Certain Scientific Accelerator, focuses on Accelerator, a teenager who can control vectors, known as the most powerful Esper in Academy City.
-        Besides its own manga adaptation, the series also has two manga series which are side stories focusing on other main characters. One of them is A Certain Scientific Railgun, which focuses on Mikoto Misaka, an Electromaster and one of the most powerful Espers in the city. The second, A Certain Scientific Accelerator, focuses on Accelerator, a teenager who can control vectors, known as the most powerful Esper in Academy City.
-        Besides its own manga adaptation, the series also has two manga series which are side stories focusing on other main characters. One of them is A Certain Scientific Railgun, which focuses on Mikoto Misaka, an Electromaster and one of the most powerful Espers in the city. The second, A Certain Scientific Accelerator, focuses on Accelerator, a teenager who can control vectors, known as the most powerful Esper in Academy City.
-        Besides its own manga adaptation, the series also has two manga series which are side stories focusing on other main characters. One of them is A Certain Scientific Railgun, which focuses on Mikoto Misaka, an Electromaster and one of the most powerful Espers in the city. The second, A Certain Scientific Accelerator, focuses on Accelerator, a teenager who can control vectors, known as the most powerful Esper in Academy City.
+        &nbsp;&nbsp;The story is se side stories focusing on other main characters. One of them is A Certain Schich are side stories focusing on other main characters. One of them is A Certain Scientific Railgun, which focuses on Mikoto Misaka, an Electromaster and one of the most powerful Espers in the city. The second, A Certain Scientific Accelerator, focuses on Accelerator, a teenager who can control vectors, known as the most powerful Esper in Academy City.
         `
         .replace(/\n/g,"<br><br>")
         .split("<br><br>")
@@ -363,8 +360,8 @@ function load_animes(){
         document.body.appendChild(h2)
         document.body.appendChild(h3)
 
-        if(window.innerWidth > sizeRemoveBG) {card.style.backgroundImage = `linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 71%, rgba(0,0,0,0) 100%), url(./images/${anime.bg})`}
-
+        if(window.innerWidth > sizeRemoveBG) {card.style.background = `linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 71%, rgba(0,0,0,0) 100%), url(./images/${anime.bg})`}
+        if(window.innerWidth < sizeRemoveBG) {card.style.background = `${defaultColor}`}
         card.style.backgroundPosition = anime.bg_pos ? anime.bg_pos : '100% 0%'
 
         card.classList.add("card")
@@ -684,16 +681,16 @@ function autocomplete(inp, arr) {
 
 window.addEventListener("resize", function(){
     if(window.innerWidth < sizeRemoveBG){
-        if(document.getElementById("horimiya").style.backgroundImage === 'none') return
+        if(document.getElementById("horimiya").style.background === `${defaultColor}`) return
         anime_lists.forEach(anime => {
             let id = anime.title.replace(/ /g,'_')
-            document.getElementById(id).style.backgroundImage = `none`
+            document.getElementById(id).style.background = `${defaultColor}`
         })
     } else {
-        if(document.getElementById("horimiya").style.backgroundImage !== 'none') return
+        if(document.getElementById("horimiya").style.background.includes("url")) return
         anime_lists.forEach(anime => {
         let id = anime.title.replace(/ /g,'_')
-        document.getElementById(id).style.backgroundImage = `url(./images/${anime.bg})`
+        document.getElementById(id).style.background = `linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 71%, rgba(0,0,0,0) 100%), url(./images/${anime.bg})`
         })
     }
 })
